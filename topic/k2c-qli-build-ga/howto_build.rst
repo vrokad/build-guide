@@ -10,12 +10,12 @@ How do I know if my build is completed?
 
 If your build instruction is ``bitbake qcom-multimedia-image``, then you
 can check if ``system.img`` is present in the
-``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
 directory:
 
 ::
 
-   cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+   cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
    ls -al system.img
 
 .. _section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265:
@@ -62,7 +62,7 @@ environment and generate eSDK:
       bitbake -c do_populate_sdk_ext <image>
 
       # Example
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
 2. After building with ``meta-qcom-extras`` and firmware sources with
@@ -76,7 +76,7 @@ environment and generate eSDK:
       export EXTRALAYERS="meta-qcom-extras"
       export CUST_ID="213195"
       export FWZIP_PATH="/local/mnt/workspace/extras/DEV/QCM6490.LE.1.0/common/build/ufs/bin"
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
 3. After building Standalone instructions within the same shell (shell
@@ -100,7 +100,7 @@ environment and generate eSDK:
 
       # Example
       cd /local/mnt/workspace/LE.QCLINUX.1.0.r1
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
 5. After building with standalone instructions using Dockerfile.
@@ -122,7 +122,7 @@ environment and generate eSDK:
          bitbake -c do_populate_sdk_ext <image>
 
          # Example
-         MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+         MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
          bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
 **eSDK generation troubleshooting – basehash mismatch**
@@ -163,14 +163,14 @@ setup and then use the BitBake commands to rebuild:
    ::
 
       # Rebuild commands
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       bitbake qcom-multimedia-image
 
 -  Build image ``qcom-multimedia-test-image``:
 
    ::
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       bitbake qcom-multimedia-test-image
 
 .. _how_to_build_qdl_standalone:
@@ -201,7 +201,7 @@ How to build a standalone QDL?
 
    ::
 
-      ./qdl --storage ufs --include <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image/prog_firehose_ddr.elf <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image/rawprogram*.xml <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image/patch*.xml
+      ./qdl --storage ufs --include <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/prog_firehose_ddr.elf <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/rawprogram*.xml <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/patch*.xml
 
 .. _section_nqg_cj3_v1c_vinayjk_03-23-24-006-3-877:
 

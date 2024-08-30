@@ -551,7 +551,7 @@ Build base image with extras
       export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
       # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest [Release Notes](https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory.
 
@@ -570,12 +570,12 @@ Build base image with extras
 
    On successful build, you can check if ``system.img`` is present in
    the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
 
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
 4. Flash the generated build using :doc:`Flash images for registered users <flash_images>`.
@@ -632,7 +632,7 @@ Build QIMP SDK image with extras
       export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
       # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest [Release Notes](https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/).
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory.
 
@@ -656,12 +656,12 @@ Build QIMP SDK image with extras
 
    On successful build, you can check if ``system.img`` is present in
    the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
 
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
 4. Flash the generated build using :doc:`Flash images for registered users <flash_images>`.
@@ -734,7 +734,7 @@ Build QIRP SDK image with extras
 
       ln -s layers/meta-qcom-robotics-distro/set_bb_env.sh ./setup-robotics-environment
       ln -s layers/meta-qcom-robotics-sdk/scripts/qirp-build ./qirp-build
-      MACHINE=qcm6490 DISTRO=qcom-robotics-ros2-humble source setup-robotics-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-robotics-ros2-humble source setup-robotics-environment
       # source setup-robotics-environment: Sets the environment settings, creates the build directory build-qcom-robotics-ros2-humble,
       # and enters into build-qcom-robotics-ros2-humble directory.
       ../qirp-build qcom-robotics-full-image
@@ -746,7 +746,7 @@ Build QIRP SDK image with extras
 
       QIRP SDK artifacts: <workspace_path>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/qirpsdk_artifacts/qirp-sdk_<version>.tar.gz
       # system.img is present in the following path
-      Robotics image: <workspace_path>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcm6490/qcom-robotics-full-image
+      Robotics image: <workspace_path>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image
 
 4. Flash the generated build using :doc:`Flash images for registered users <flash_images>`.
 

@@ -36,7 +36,7 @@ Following are the steps to flash CDT:
 
    ::
 
-      cp <the downloaded CDT bin file> <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image/
+      cp <the downloaded CDT bin file> <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/
 
    .. note:: ``<workspace_path>`` is the directory where you made your Yocto build.
 

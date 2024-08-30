@@ -176,7 +176,7 @@ Build base image
 
    ::
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory.
 
@@ -192,12 +192,12 @@ Build base image
 
    On successful build, you can check if ``system.img`` is present in
    the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
 
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
 .. _section_lrb_1nd_fbc:
@@ -241,7 +241,7 @@ Build QIMP SDK image
 
    ::
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory.
 
@@ -255,12 +255,12 @@ Build QIMP SDK image
 
    On successful build, you can check if ``system.img`` is present in
    the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
 
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
 .. _section_gv3_czl_qbc_vinayjk_06-06-24-1402-32-392:
@@ -304,7 +304,7 @@ Build QIRP SDK image
 
       ln -s layers/meta-qcom-robotics-distro/set_bb_env.sh ./setup-robotics-environment
       ln -s layers/meta-qcom-robotics-sdk/scripts/qirp-build ./qirp-build
-      MACHINE=qcm6490 DISTRO=qcom-robotics-ros2-humble source setup-robotics-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-robotics-ros2-humble source setup-robotics-environment
       # source setup-robotics-environment: Sets the environment settings, creates the build directory build-qcom-robotics-ros2-humble,
       # and enters into build-qcom-robotics-ros2-humble directory.
 
@@ -321,7 +321,7 @@ Build QIRP SDK image
 
       QIRP SDK artifacts: <WORKSPACE DIR>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/qirpsdk_artifacts/qirp-sdk_<version>.tar.gz
       # system.img is present in the following path
-      Robotics image: <WORKSPACE DIR>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcm6490/qcom-robotics-full-image
+      Robotics image: <WORKSPACE DIR>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image
 
 .. _section_k51_23b_wbc_vinayjk_06-26-24-1344-54-418:
 
@@ -364,7 +364,7 @@ Build real-time Linux image
 
    ::
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory
 
@@ -376,12 +376,12 @@ Build real-time Linux image
 
    On successful build, you can check if ``system.img`` is present in
    the
-   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image``
+   ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
 
-      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image
+      cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
 .. _section_x2k_vnf_w1c:

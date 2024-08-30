@@ -164,7 +164,7 @@ This includes the following steps:
 
    ::
 
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
 
 3. Build the software image:
 

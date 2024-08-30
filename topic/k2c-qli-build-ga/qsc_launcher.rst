@@ -312,7 +312,7 @@ Use QSC Launcher
     ::
 
        # system.img is present at the following path
-       <Base_Workspace_Path>/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/tmp-glibc/deploy/images/qcm6490/qcom-multimedia-image/*
+       <Base_Workspace_Path>/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/*
 
     On a successful build of the ``qcom-robotics-ros2-humble`` (QIRP)
     distribution, you can see the QIRP SDK build artifacts at the
@@ -322,7 +322,7 @@ Use QSC Launcher
 
        QIRP SDK artifacts: <Base_Workspace_Path>/DEV/LE.QCROBOTICS.1.0.r1/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/qirpsdk_artifacts/qirp-sdk_<version>.tar.gz
        # system.img is present at the following path
-       Robotics image: <Base_Workspace_Path>/DEV/LE.QCROBOTICS.1.0.r1/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcm6490/qcom-robotics-full-image/*
+       Robotics image: <Base_Workspace_Path>/DEV/LE.QCROBOTICS.1.0.r1/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image/*
 
    
     .. note:: ``<Base_Workspace_Path>`` is the path that you select on the Select Resources page.

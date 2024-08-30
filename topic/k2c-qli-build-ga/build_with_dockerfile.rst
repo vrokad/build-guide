@@ -159,7 +159,7 @@ Build QIMP SDK image
 
       ::
 
-         MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+         MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
          # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
          # and enters into build-qcom-wayland directory
 
@@ -208,7 +208,7 @@ Rebuild
    ::
 
       # cd <release directory>
-      MACHINE=qcm6490 DISTRO=qcom-wayland source setup-environment
+      MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland source setup-environment
       # source setup-environment: Sets the environment settings, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory
 

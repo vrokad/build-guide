@@ -6,6 +6,7 @@ Host machine requirements
    .. flat-table::
       :widths: 24 24 24
       :header-rows: 1
+      :class: longtable table-wrap
 
       * - Configuration
         - Tools
@@ -30,4 +31,3 @@ Host machine requirements
 
       * - Ubuntu 22.04
         - GNU Make 4.0 or later versions
-

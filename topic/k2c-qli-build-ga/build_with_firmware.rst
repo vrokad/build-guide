@@ -13,6 +13,7 @@ tags:
 
 .. flat-table:: Table : Qualcomm Yocto layers and manifest tags
    :header-rows: 1
+   :class: longtable
 
    * - Access level
      - Yocto layer
@@ -48,6 +49,7 @@ that can be downloaded according to the need and entitlements:
 .. flat-table:: Table : Mapping access levels
    :widths: 24 24 24
    :header-rows: 1
+   :class: longtable table-wrap
 
    * - **Access level**
      - **Distribution**

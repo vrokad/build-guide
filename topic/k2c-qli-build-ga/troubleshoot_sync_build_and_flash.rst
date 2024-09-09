@@ -449,7 +449,9 @@ Build
    -  Git clone of ``meta-qcom-qim-product-sdk`` did not complete
       successfully.
    -  ``meta-qcom-qim-product-sdk`` layer is not exported to
-      EXTRALAYERS. **Error excerpt**
+      EXTRALAYERS.
+      
+   **Error excerpt**
 
    ::
 

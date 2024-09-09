@@ -8,9 +8,7 @@ Setup
 How to connect to a UART shell?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-To set up the debug UART connection and view diagnostic messages,
-connect the micro-USB cable from the micro-USB port on the RB3 Gen 2
-device to the Linux host.
+To set up the debug UART connection and view diagnostic messages, connect the micro-USB cable from the micro-USB port on the RB3 Gen 2 device to the Linux host.
 
 .. image:: ../../media/k2c-qli-build-ga/micro_usb_port.jpg
 
@@ -97,36 +95,20 @@ How to SSH?
 
 **Set up Wi-Fi**
 
-Wi-Fi is operational in Station mode. The Wi-Fi host driver and the
-authentication for network management are initialized during the device
-boot up.
+Wi-Fi is operational in Station mode. The Wi-Fi host driver and the authentication for network management are initialized during the device boot up.
 
 To update the Wi-Fi configuration, perform the following from the debug :ref:`UART serial console <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>`:
 
-1. Remount and enable read-and-write access to the default read-only
-   ``rootfs`` file before editing the ``/etc/wpa_supplicant.conf`` file:
-
-   ::
-
-      mount -o rw,remount /
-
-2. Stop the ``wpa_supplicant``:
+1. Stop the ``wpa_supplicant``:
 
    ::
 
       killall wpa_supplicant
 
-3. Modify the content of the default ``wpa_supplicant.conf`` file to
-   match the SSID and password of your router and open it using the
-   on-device VI editor:
-
-   ::
-
-      vi /etc/wpa_supplicant.conf
+#. Open the default ``/etc/wpa_supplicant.conf`` file using your preferred text editor and modify the content of the file to match the SSID and password of your router:
 
    .. note::
-        You can see the following configurations for security types specified in the default ``wpa_supplicant.conf`` file at ``/etc`` to
-        add your required router configurations.
+        You can see the configurations of security types specified in the default ``/etc/wpa_supplicant.conf`` file to add your required router configurations.
 
    ::
 
@@ -137,16 +119,16 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
       #Open
       #       ssid="example open network"
       #       key_mgmt=NONE
-      #WPA-PSK
-      #  Update the SSID to match that of the Wi-Fi SSID of your router. 
+      #WPA-PSK-Configuration
+      #  Update the SSID to match the Wi-Fi SSID of your router. 
       ssid="QSoftAP"
       #       proto=WPA RSN
       #       key_mgmt=WPA-PSK
       #       pairwise=TKIP CCMP
       #       group=TKIP CCMP
-      # Update the password to match that of the Wi-Fi password of your router.
+      # Update the password to match the Wi-Fi password of your router.
       psk="1234567890"
-      #WEP
+      #WEP-Configuration
       #       ssid="example wep network"
       #       key_mgmt=NONE
       #       wep_key0="abcde"
@@ -154,17 +136,17 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
       #       wep_tx_keyidx=0
       }
 
-4. Save the modified ``wpa_supplicant.conf`` file and verify its
+#. Save the modified ``wpa_supplicant.conf`` file and verify its
    content:
 
    ::
 
       cat /etc/wpa_supplicant.conf
 
-5. Reboot or power cycle the device. Wait for approximately one minute
+#. Reboot or power cycle the device. Wait for approximately one minute
    to establish a WLAN connection with the updated SSID and password.
 
-6. **(Optional)** If you prefer not to reboot the device, run the
+#. **(Optional)** If you prefer not to reboot the device, run the
    following commands:
 
    ::
@@ -172,7 +154,7 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
       wpa_supplicant -Dnl80211 -iwlan0 -ddd -c /etc/wpa_supplicant.conf -f /tmp/wpa_supplicant-log.txt &
       dhcpcd wlan0
 
-7. Check the WLAN connection status and IP address:
+#. Check the WLAN connection status and IP address:
 
    ::
 
@@ -180,25 +162,23 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
 
    .. image:: ../../media/k2c-qli-build-ga/setup_wifi_2.png
 
-8. Ping the router to confirm the connection:
+#. Ping the router to confirm the connection:
 
    ::
 
-      ping 8.8.8.8
-
-   .. image:: ../../media/k2c-qli-build-ga/setup_wifi_3.png
+      ping qualcomm.com
 
 **Connect to SSH**
 
-.. note:: Ensure that a Wi-Fi connection is established before connecting to SSH.
+Ensure that a :ref:`Wi-Fi connection <howto_setup_wifi_sub>` is established before connecting to SSH.
 
-1. Find the IP address of the RB3 Gen 2 device in UART console:
+1. Find the IP address of the RB3 Gen 2 device in the UART console on the Windows host:
 
    ::
 
       ifconfig wlan0
 
-2. Use the IP address obtained from **step 1** to SSH the device:
+#. Use the IP address obtained from **step 1** to SSH the device from the remost host:
 
    ::
 
@@ -208,17 +188,13 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
 
    ``ssh root@10.92.180.250``
 
-3. Connect to the SSH shell using the following password:
+#. Connect to the SSH shell using the following password:
 
    ::
 
       oelinux123
 
-.. note:: Ensure that the Linux host is connected to the same Wi-Fi access point.
-
-
-.. note:: To transfer the files successfully using the ``scp`` command,
-          use the password ``oelinux123``.
+.. note:: Ensure that the remote host is connected to the same Wi-Fi access point.
 
 .. _section_j5g_rds_5bc_vinayjk_06-21-24-1739-53-921:
 
@@ -290,7 +266,7 @@ solution.
    `firmware <https://www.renesas.com/us/en/products/interface/usb-switches-hubs/upd720201-usb-30-host-controller>`__,
    you must register and log in with your ID.
 
-2. Transfer the files using SCP to the following path:
+#. Transfer the files using SCP to the following path:
    ``/lib/firmware``.
 
    .. note:: 

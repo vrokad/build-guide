@@ -297,7 +297,9 @@ How to download the Platform eSDK?
          unzip qcom-6.6.28-QLI.1.1-Ver.1.1_qim-product-sdk-1.1.3.zip
 
       After unzipping, ensure that the eSDK installer is located at
-      ``<unzip_location>/target/qcm6490/sdk/``:|imageunzipESDK|
+      ``<unzip_location>/target/qcm6490/sdk/``:
+      
+      |imageunzipESDK|
 
    #. If you do not have the necessary write permissions for the
       directory where you are trying to install the eSDK, the installer
@@ -321,7 +323,9 @@ How to download the Platform eSDK?
 6. Ensure that the eSDK installation is successful.
 
    After installation, the QIMP SDK layers are included in the
-   installation under ``<workspace_path>/layers``:|imageLayerWorkspace|
+   installation under ``<workspace_path>/layers``:
+
+   |imageLayerWorkspace|
 
    .. note:: Advanced developers can still build their own eSDK by following the steps
              mentioned in `Advanced procedure <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51/advanced-procedure.html>`__.

@@ -182,7 +182,7 @@ Flash software using QDL
    If you need ModemManager, you can start it again after the flashing
    is complete.
   
-2.  Download the QDL tool, compile it, and flash the images:
+#. Download the QDL tool, compile it, and flash the images:
 
    ::
 

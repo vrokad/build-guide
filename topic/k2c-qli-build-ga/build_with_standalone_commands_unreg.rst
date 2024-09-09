@@ -54,11 +54,7 @@ required software tools are installed and configured for use.
 Sync
 ^^^^^^^
 
-This section uses the Repo tool installed in the previous section to
-download a list of git repositories and additional attributes from the
-`Qualcomm manifest <https://github.com/quic-yocto/qcom-manifest>`__. As
-part of this process, it downloads the manifest used in the
-``repo init`` command.
+This section uses the Repo tool installed in :ref:`Ubuntu host setup <section_twd_1bv_xbc_vinayjk_07-02-24-2039-30-667>` to download a list of git repositories and additional attributes from the `Qualcomm manifest <https://github.com/quic-yocto/qcom-manifest>`__. As part of this process, the Repo tool downloads the manifest using the ``repo init`` command.
 
 The following table shows an example mapping of Yocto layers to the
 manifest release tags that are used to download and build Qualcomm
@@ -158,7 +154,7 @@ Build base image
       repo sync
 
    .. note::  
-      For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
+      For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
 
 2. Set up the build environment:
 
@@ -204,7 +200,7 @@ Build QIMP SDK image
 
    .. note:: 
              | The ``<manifest release tag>`` for the QIMP SDK build is the same as the base build. The QIMP SDK layer must be cloned on top of the base build. 
-             | For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
+             | For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
 
    ::
 
@@ -261,8 +257,7 @@ Build QIRP SDK image
 
 1. Download Qualcomm Yocto and supporting layers:
 
-   .. note:: The ``<manifest release tag>`` for QIRP SDK build is the same as the base build. QIRP SDK layers must be cloned on top of the
-             base build.
+   .. note:: The ``<manifest release tag>`` for QIRP SDK build is the same as the base build. QIRP SDK layers must be cloned on top of the base build.
 
    ::
 
@@ -273,8 +268,7 @@ Build QIRP SDK image
       # Example, <manifest release tag> is qcom-6.6.28-QLI.1.1-Ver.1.1.xml
       repo sync
 
-   .. note:: For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release
-             Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
+   .. note:: For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
 
 2. Download the QIRP SDK layers into the base build ``<WORKSPACE DIR>``
    directory:
@@ -303,7 +297,7 @@ Build QIRP SDK image
 
       ../qirp-build qcom-robotics-full-image
 
-   On a successful build, you can see the QIRP SDK build artifacts at
+   On successful build, you can see the QIRP SDK build artifacts at
    the following paths:
 
    ::
@@ -319,8 +313,7 @@ Build real-time Linux image
 
 1. Download Qualcomm Yocto and supporting layers:
 
-   .. note:: The ``<manifest release tag>`` for real-time Linux image is the same as the base build. Real-time Linux must be cloned on top of
-             the base build.
+   .. note:: The ``<manifest release tag>`` for real-time Linux image is the same as the base build. Real-time Linux must be cloned on top of the base build.
 
    ::
 
@@ -331,8 +324,7 @@ Build real-time Linux image
       # Example, <manifest release tag> is qcom-6.6.28-QLI.1.1-Ver.1.1.xml
       repo sync
 
-   .. note::  For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release
-              Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
+   .. note::  For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
 
 2. Clone real-time Linux layer into the workspace:
 

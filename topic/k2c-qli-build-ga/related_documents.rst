@@ -6,6 +6,7 @@ Related documents
 .. flat-table::
    :widths: 36 36
    :header-rows: 1
+   :class: longtable table-wrap
 
 
    * - Document title

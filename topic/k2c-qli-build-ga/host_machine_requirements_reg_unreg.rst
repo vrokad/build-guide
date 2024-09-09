@@ -5,6 +5,7 @@ Host machine requirements
 
 .. flat-table::
    :header-rows: 2
+   :class: longtable table-wrap
 
    * - :cspan:`2` Configuration
       

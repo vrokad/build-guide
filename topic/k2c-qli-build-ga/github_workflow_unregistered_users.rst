@@ -6,7 +6,7 @@ GitHub workflow for unregistered users
 =============================================
 
 The following sections provide instructions to use GitHub to make a
-build utilizing the prebuilt proprietary binary images.
+build utilizing the prebuilt proprietary binaries/images.
 
 .. _host_machine_req_github_workflow_unregistered_users:
 

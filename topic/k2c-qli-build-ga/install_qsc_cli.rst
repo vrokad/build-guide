@@ -32,4 +32,4 @@ Set up ``qsc-cli``:
 
 .. note:: 
    - A one-time login into `chipcode.qti.qualcomm.com <http://chipcode.qti.qualcomm.com/>`__ is required to download Qualcomm proprietary git repositories. Use your Qualcomm login credentials to complete this step. 
-   - For more details, see ``qsc-cli`` related topics in :doc:`How to <how_to>`.
+   - For more information, see ``qsc-cli`` related topics in :doc:`How to <how_to>`.

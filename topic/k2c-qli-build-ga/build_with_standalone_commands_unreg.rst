@@ -54,11 +54,9 @@ required software tools are installed and configured for use.
 Sync
 ^^^^^^^
 
-This section uses the Repo tool installed in :ref:`Ubuntu host setup <section_twd_1bv_xbc_vinayjk_07-02-24-2039-30-667>` to download a list of git repositories and additional attributes from the `Qualcomm manifest <https://github.com/quic-yocto/qcom-manifest>`__. As part of this process, the Repo tool downloads the manifest using the ``repo init`` command.
+This section uses the Repo tool installed in :ref:`Ubuntu host setup <section_twd_1bv_xbc_vinayjk_07-02-24-2039-30-667>` to download a list of git repositories and additional attributes from the `Qualcomm manifest <https://github.com/quic-yocto/qcom-manifest>`__. The Repo tool downloads the manifests using the ``repo init`` command.
 
-The following table shows an example mapping of Yocto layers to the
-manifest release tags that are used to download and build Qualcomm
-Linux:
+The following table shows an example mapping of Yocto layers to the manifest release tags that are used to download and build Qualcomm Linux:
 
 .. note::
    - The following is the syntax for manifest release tag: ``qcom-<Linux LTS Kernel Version>-QLI.<version>-Ver.<release>.xml``
@@ -134,7 +132,7 @@ Linux:
        ``qcom-6.6.38-QLI.1.2-Ver.1.0_robotics-product-sdk-1.0.xml``
      - ``qcom-robotics-ros2-humble``
 
-For Yocto layer descriptions, see :ref:`Table: Qualcomm Linux Yocto layers <host_machine_qsc_Launcher>`.
+For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
 
 .. _section_sk2_xk2_fbc:
 
@@ -170,14 +168,14 @@ Build BSP image
 #. Build the software image:
 
    .. note::
-      For supported image recipes, see :ref:`What are the image recipes supported as part of the GitHub workflow? <section_x3c_n5l_zbc_vinayjk_07-08-24-1744-58-455>`.
+      For supported image recipes, see :ref:`What are the image recipes supported in the GitHub workflow? <section_x3c_n5l_zbc_vinayjk_07-08-24-1744-58-455>`.
 
    ::
 
       bitbake <image recipe>
       # Example, bitbake qcom-multimedia-image
 
-   On successful build, you can check if ``system.img`` is present in
+   On a successful build, you can check if ``system.img`` is present in
    the
    ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
@@ -195,7 +193,7 @@ Build QIMP SDK image
 1. Download Qualcomm Yocto and supporting layers:
 
    .. note:: 
-      - The ``<manifest release tag>`` for the QIMP SDK build is the same as the BSP build. The QIMP SDK layer must be cloned on top of the BSP build. 
+      - The ``<manifest release tag>`` for the QIMP SDK build is the same as the BSP build. Clone the QIMP SDK layer on top of the BSP build. 
       - For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
    ::
@@ -207,7 +205,7 @@ Build QIMP SDK image
       # Example, <manifest release tag> is qcom-6.6.38-QLI.1.2-Ver.1.0.xml
       repo sync
 
-#. Clone QIMP SDK layer into the workspace:
+#. Clone the QIMP SDK layer into the workspace:
 
    ::
 
@@ -240,7 +238,7 @@ Build QIMP SDK image
       # Build SDK image
       bitbake qcom-qim-product-sdk
 
-   On successful build, you can check if ``system.img`` is present in
+   On a successful build, you can check if ``system.img`` is present in
    the
    ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
@@ -257,7 +255,7 @@ Build QIRP SDK image
 
 1. Download Qualcomm Yocto and supporting layers:
 
-   .. note:: The ``<manifest release tag>`` for QIRP SDK build is the same as the BSP build. QIRP SDK layers must be cloned on top of the BSP build.
+   .. note:: The ``<manifest release tag>`` for QIRP SDK build is the same as the BSP build. Clone the QIRP SDK layers on top of the BSP build.
 
    ::
 
@@ -301,7 +299,7 @@ Build QIRP SDK image
 
       ../qirp-build qcom-robotics-full-image
 
-   On successful build, you can see the QIRP SDK build artifacts at
+   On a successful build, you can see the QIRP SDK build artifacts at
    the following paths:
 
    ::
@@ -317,7 +315,7 @@ Build real-time Linux image
 
 1. Download Qualcomm Yocto and supporting layers:
 
-   .. note:: The ``<manifest release tag>`` for real-time Linux image is the same as the BSP build. Real-time Linux must be cloned on top of the BSP build.
+   .. note:: The ``<manifest release tag>`` for real-time Linux image is the same as the BSP build. Clone the real-time Linux on top of the BSP build.
 
    ::
 
@@ -330,7 +328,7 @@ Build real-time Linux image
 
    .. note::  For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
-#. Clone real-time Linux layer into the workspace:
+#. Clone the real-time Linux layer into the workspace:
 
    ::
 
@@ -361,7 +359,7 @@ Build real-time Linux image
 
       bitbake qcom-multimedia-image
 
-   On successful build, you can check if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
+   On a successful build, you can check if ``system.img`` is present in the ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
 
    ::
@@ -374,6 +372,6 @@ Build real-time Linux image
 Flash
 ^^^^^^^
 
-Flash software images to the device using :doc:`Flash images for unregistered users <flash_images_unregistered>`.
+To flash the software images to the device, see :doc:`Flash images for unregistered users <flash_images_unregistered>`.
 
 

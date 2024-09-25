@@ -237,7 +237,7 @@ commands as shown in the following example:
 
 .. _section_x3c_n5l_zbc_vinayjk_07-08-24-1744-58-455:
 
-What are the image recipes supported as part of the GitHub workflow?
+What are the image recipes supported in the GitHub workflow?
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 +------------------------------------+------------------------------------------+
@@ -324,18 +324,15 @@ How to download the Platform eSDK?
 
       sh ./qcom-wayland-x86_64-qcom-multimedia-image-armv8-2a-qcm6490-toolchain-ext-1.0.sh
 
-5. Follow the instructions on the console to install the eSDK in a
-   convenient location of your host PC.
+5. Follow the instructions on the console to install the eSDK in a convenient location of your host PC.
 
 6. Ensure that the eSDK installation is successful.
 
-   After installation, the QIMP SDK layers are included in the
-   installation under ``<workspace_path>/layers``:
+   After installation, the QIMP SDK layers are included under ``<workspace_path>/layers``:
 
    |imageLayerWorkspace|
 
-   .. note:: Advanced developers can still build their own eSDK by following the steps
-             mentioned in `Advanced procedure <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51/advanced-procedure.html>`__.
+   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedure <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51/advanced-procedure.html>`__.
 
 7. Run the following command to set the ``ESDK_ROOT`` variable:
 
@@ -350,8 +347,7 @@ How to download the Platform eSDK?
       export ESDK_ROOT=/local/mnt/workspace/Platform_eSDK_plus_QIM
 
 The QIMP SDK installation is now complete. To develop an application for
-the platform, see `Develop your first
-application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51/content-develop-your-first-application.html>`__.
+the device, see `Develop your first application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51/content-develop-your-first-application.html>`__.
 
 
 

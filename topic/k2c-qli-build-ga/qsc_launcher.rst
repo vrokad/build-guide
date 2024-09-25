@@ -14,7 +14,7 @@ Use QSC Launcher
       /opt/qcom/softwarecenter/bin/softwarecenter
 
    .. note:: 
-       For the Launcher workflow to detect connected devices and flash software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host machine. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
+       For the Launcher workflow to detect the connected devices and flash the software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host machine. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
 
       .. image:: ../../media/k2c-qli-build-ga/QSC_has_PCAT_QUD_install_info.png
 
@@ -30,7 +30,7 @@ Use QSC Launcher
 
       The ``qpm-cli --help`` command lists the help options.
 
-      For Ubuntu 22.04, you may encounter an issue while installing QUD where you are asked to enroll the public key on your Linux host for a successful QUD installation. For more details, follow the steps provided in the ``signReadme.txt`` file available at the ``/opt/QUIC/sign/`` directory.
+      For Ubuntu 22.04, you may encounter an issue while installing QUD where you are asked to enroll the public key on your Linux host for a successful QUD installation. For more information, follow the steps provided in the ``signReadme.txt`` file available at the ``/opt/QUIC/sign/`` directory.
 
 2. Use your Qualcomm ID to log in to the QSC desktop application. A dashboard page appears as shown in the following figure:
 
@@ -46,7 +46,7 @@ Use QSC Launcher
    -  Host OS: **Linux**
    -  Target OS: **LE** 
 
-   .. note:: See `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__ for all the supported chipsets.
+   .. note:: For more information on the supported chip products, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
 .. image:: ../../media/k2c-qli-build-ga/qsc_launcher_specifyEnvironment_v2.jpg
 
@@ -63,12 +63,12 @@ Use QSC Launcher
 
    c. Select release ID (See the latest `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__. For example, **r00218.1**).
 
-   d. Select the appropriate distribution to download. Distribution access is controlled by access levels as listed in the following table:
+   d. Select the appropriate distribution to download. Access levels control the distribution access as shown in the following table:
 
         .. note::  
-          For more details on the available distributions, see the **Access Controlled Distribution** table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
+          For more information on the available distributions, see the **Access Controlled Distribution** table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
-      .. flat-table:: 
+      .. flat-table:: Access controlled distributions
          :widths: 24 24 24
          :header-rows: 1
          :class: longtable table-wrap
@@ -77,7 +77,7 @@ Use QSC Launcher
            - **Distribution**
            - Yocto layers
          * - :rspan:`2` Public developers (unregistered)
-           - BSP build: High-level operating system (OS) and prebuilt firmware (GPS only)       
+           - Board support package (BSP) build: High-level operating system (OS) and prebuilt firmware (GPS only)       
              
              ``Qualcomm_Linux.SPF.1.0|TEST|DEVICE|PUBLIC``
            - ``meta-qcom``       
@@ -218,52 +218,14 @@ Use QSC Launcher
              ``meta-qcom-qim-product-sdk``
 	  
       .. note::
-         For more details on QIMP SDK and QIRP SDK, see the following guides:
+         
+         - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
+         
+         - For more information on the QIMP and QIRP SDKs, see the following guides:
 
-         - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-51>`__
-         - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-65220-2>`__
+           - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51>`__
+           - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-265>`__
 
-      The Qualcomm Linux Yocto layers are described in the following table:
-	  
-        .. list-table:: Table: Qualcomm Linux Yocto layers
-           :widths: 22 50
-           :header-rows: 1
-           :class: longtable
-	  
-	  
-           * - Yocto layer
-             - Description
-	  
-           * - ``meta-qcom``
-             - Contains Qualcomm hardware support metadata with upstream OSS software components.
-	  
-           * - ``meta-qcom-hwe``
-             - Contains Qualcomm hardware support metadata with board support package (BSP) software components.
-
-           * - ``meta-qcom-distro``
-             - Contains reference distribution configuration for Qualcomm products, image recipes, and package groups.
-	  
-           * - ``meta-qcom-extras``
-             - Enables source compilation of select components, which are otherwise present as binary in ``meta-qcom-hwe``. This layer is an optional metadata layer for registered developers.
-	  
-           * - ``meta-qcom-qim-product-sdk``
-             - Provides Qualcomm's multimedia and AI SDKs based GStreamer framework. It includes a set of GStreamer plugin sample applications for multimedia and AI use cases.
-	  
-           * - ``meta-ros``
-             - Contains a series of OpenEmbedded layers to add support for the Robot Operating System (ROS) for embedded Linux releases by the Yocto Project.
-	  
-           * - ``meta-qcom-robotics-distro``
-             - Contains the configuration information needed to generate the ROS image, including the package group and image recipe.
-	  
-           * - ``meta-qcom-robotics``
-             - Contains the robotics recipes and the mechanism to generate Robotics SDK.
-	  
-           * - ``meta-qcom-robotics-extras``
-             - Contains the proprietary robotics recipes that are built with source.
-	  
-           * - ``meta-qcom-robotics-sdk``
-             - Contains the generation mechanism (package of cross-compile toolchain, script, and function SDK) and pick-up mechanism (necessary files from QIMP SDK, QNN SDK, and QIRF SDK through ``config.json``) of Robotics Product SDK.
-    
 6.  Click **Download** to download the selected software:
 
     .. image:: ../../media/k2c-qli-build-ga/Download_button_exists_page.png
@@ -305,7 +267,7 @@ Use QSC Launcher
 
     .. image:: ../../media/k2c-qli-build-ga/qsc_compile_complete.png
 
-10. Click **Next** to flash software to the device.
+10. Click **Next** to flash the software to the device.
 
 .. _section_cmp_qbj_x1c:
 
@@ -316,7 +278,7 @@ Flash
    Ensure that the device is in Emergency Download (EDL) mode
    before you flash the software. For more information on how to force the device into EDL mode, see :ref:`Move to EDL mode <section_vgg_mly_v1c>`.
 
-To flash software to the device with Launcher, perform the following steps:
+To flash the software to the device with QSC Launcher, perform the following steps:
 
 1. With the device connected and in EDL mode, select the device on which you want to flash the software as shown in the following figure:
 

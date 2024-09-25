@@ -5,9 +5,9 @@ Flash images for unregistered users
 
 Unregistered users must flash the software using the following steps:
 
-1. Update ``udev`` rules (one-time prerequisite).
+1. Update the ``udev`` rules (one-time prerequisite).
 2. Move the device to Emergency Download (EDL) mode.
-3. Flash software using QDL tool.
+3. Flash the software using QDL tool.
 
 .. _section_wxy_mty_v1c:
 
@@ -58,7 +58,7 @@ Move to EDL mode
 ------------------------------------
 
 The device must be in EDL mode before you flash the software. The
-Qualcomm RB3 Gen 2 platform enters EDL mode if there is no image on the
+Qualcomm RB3 Gen 2 device enters EDL mode if there is no image on the
 device after power up or if it is corrupted. To force the device into
 EDL mode, use any one of the following methods:
 

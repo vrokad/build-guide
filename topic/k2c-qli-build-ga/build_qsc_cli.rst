@@ -30,8 +30,7 @@ Download
 
    -  Select Product_ID and Build_ID values from the **QSC-CLI Input Parameters** table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
-      Example: For QCM6490 with Linux embedded (LE) build, the input
-      parameters are shown in the following table:
+      Example: For QCM6490 with Linux embedded (LE) build, the input parameters are shown in the following table:
 
         .. list-table::
            :class: longtable
@@ -47,11 +46,11 @@ Download
                    QCM6490.LE.1.0-00218-STD.PROD-1
 
 
-    -   Select the appropriate distribution to download. Distribution access is controlled by access levels as listed in the following access controlled distributions table:
+    -   Select the appropriate distribution to download. Access levels control the distribution access as shown in the following table:
 
    .. note:: 
-      - For more details on the available distributions, see *Access Controlled Distribution* table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
-      - ``meta-selinux``, ``meta-virtualization``, ``meta-security``, ``meta-rust``, ``meta-openembedded``, and ``poky/meta`` are community layers that are common for all the distributions listed in the following access controlled distributions table. For more information on Qualcomm Linux BSP layers, see *Qualcomm BSP metadata layers* in the `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-27/platform_software_features.html#sub$qualcomm_bsp_metadata_layers>`__.
+      - For more information on the available distributions, see the *Access Controlled Distribution* table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
+      - ``meta-selinux``, ``meta-virtualization``, ``meta-security``, ``meta-rust``, ``meta-openembedded``, and ``poky/meta`` are community layers that are common for all the distributions listed in the following access controlled distributions table. For more information on the Qualcomm Linux BSP layers, see `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70014-27/platform_software_features.html#sub$qualcomm_bsp_metadata_layers>`__.
 
    .. flat-table:: Access controlled distributions
       :widths: 24 24 24
@@ -194,10 +193,9 @@ Download
           
           ``meta-qcom-extras``
           
-          ``meta-qcom-qim-product-sdk``      
-   
-    
-   For Yocto layer descriptions, see :ref:`Table: Qualcomm Linux Yocto layers <host_machine_qsc_Launcher>`.
+          ``meta-qcom-qim-product-sdk``
+      
+   For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
 
 -  Start the download:
 
@@ -233,7 +231,7 @@ Start the compilation after the download completes:
    # Example
    qsc-cli compile --workspace-path '/local/mnt/workspace/Qworkspace_QIMPSDK'
 
-This process builds the Qualcomm firmware as needed and also completes the build for the Qualcomm Linux.
+This process builds the necessary Qualcomm firmware and also completes the Qualcomm Linux build.
 
 .. note:: 
    If you see a BitBake fetcher error, retry compilation to work around this error. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
@@ -246,9 +244,7 @@ the images at the following path:
    # system.img is present at the following path
    <workspace_path>/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/*
 
-On a successful build of the ``qcom-robotics-ros2-humble`` (QIRP)
-distribution, you can see the QIRP SDK build artifacts at the following
-paths:
+On a successful build of the ``qcom-robotics-ros2-humble`` (QIRP) distribution, you can see the QIRP SDK build artifacts at the following paths:
 
 ::
 
@@ -272,12 +268,12 @@ CLI:
    qsc-cli compile --image LE.QCLINUX.1.0.r1 --workspace-path '/local/mnt/workspace/Qworkspace_QIMPSDK'
 
 .. note:: 
-    For more information on software image names (``--image``), see QSC-CLI Input Parameters table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
+    For more information on software image names (``--image``), see *QSC-CLI Input Parameters* table in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240911224732/>`__.
 
 .. _section_x2k_vnf_w1c:
 
 Flash
 ^^^^^^^
 
-For the steps to flash software images to the device, see :doc:`Flash images for registered users<flash_images>`.
+To flash the software images to the device, see :doc:`Flash images for registered users<flash_images>`.
 

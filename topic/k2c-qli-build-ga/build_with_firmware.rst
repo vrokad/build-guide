@@ -38,11 +38,12 @@ tags:
      - ``meta-qcom-extras``
      - meta-qcom-extras release tag
      - r1.0_00046.0 
-   * - See :ref:`Table: Mapping access levels  <build_mapping_access_levels>`
+   * - See :ref:`Table: Mapping access levels <build_mapping_access_levels>`
      - NA
      - firmware release tag
      - r1.0_00044.0
-The following tables describe the available distributions for firmware that can be downloaded according to the need and entitlements:
+
+The following tables describe the firmware distributions that can be downloaded according to the need and entitlements:
 
 .. _build_mapping_access_levels:
 
@@ -154,7 +155,7 @@ The following tables describe the available distributions for firmware that can 
 
        ``meta-qcom-qim-product-sdk``
 
-For Yocto layer descriptions, see :ref:`Table: Qualcomm Linux Yocto layers <host_machine_qsc_Launcher>`.
+For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
 
 .. _Mapping_firmware_table:
 
@@ -197,7 +198,7 @@ For Yocto layer descriptions, see :ref:`Table: Qualcomm Linux Yocto layers <host
 
 .. note:: Commands in the following sections are based on binary and source for firmware images without modem and GPS (see the command in :ref:`Table: Mapping of firmware distributions and git repositories <Mapping_firmware_table>`). Hence, ``qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is used. If you use any other distribution, then update the directory accordingly.
 
-The **Git command** column (see :ref:`Table: Mapping of firmware distributions and git repositories <Mapping_firmware_table>`) provides the git repository, which contains the firmware sources. These repositories are hosted on Qualcomm servers. Clone the appropriate repositories based on your access profile and use case. The following git clone command downloads the selected firmware components in source, except the modem:
+The **Git command** column (see :ref:`Table: Mapping of firmware distributions and git repositories <Mapping_firmware_table>`) provides the git repository, which contains the firmware sources. These repositories are hosted on Qualcomm servers. Clone the appropriate repositories based on your access profile and use case. The following ``git clone`` command downloads the selected firmware components in source, except the modem:
 
 ::
 
@@ -221,7 +222,7 @@ Build firmware
 
        .. rubric:: Prerequisites
 
-       -  Ensure that the working shell is ``bash``. Check the output:
+       -  Ensure that the working shell is ``bash``.
 
           ::
 
@@ -484,7 +485,7 @@ Build firmware
 
        .. rubric:: Prerequisites
 
-       -  Ensure that the working shell is ``bash``. Check the output:
+       -  Ensure that the working shell is ``bash``.
 
           ::
 
@@ -778,7 +779,7 @@ Build BSP image with extras
           bitbake -fc cleansstate qcom-multimedia-image
           bitbake -fc cleanall qcom-multimedia-image
 
-   On successful build, you can check if ``system.img`` is present in
+   On a successful build, you can check if ``system.img`` is present in
    the
    ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:
@@ -874,7 +875,7 @@ Build QIMP SDK image with extras
          bitbake -fc cleansstate qcom-qim-product-sdk
          bitbake -fc cleanall qcom-qim-product-sdk
 
-   On successful build, you can check if ``system.img`` is present in
+   On a successful build, you can check if ``system.img`` is present in
    the
    ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image``
    directory:

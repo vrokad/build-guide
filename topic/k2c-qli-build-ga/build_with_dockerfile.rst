@@ -15,8 +15,7 @@ Ubuntu host setup
       # Install git if you have not already installed
       sudo apt install git
 
--  Clone the ``qcom-download-utils`` git repository, which provides
-   Dockerfile for Qualcomm public Yocto layers and a few helper scripts:
+-  Clone the ``qcom-download-utils`` git repository, which provides a Dockerfile for Qualcomm public Yocto layers and a few helper scripts:
 
    ::
 
@@ -53,9 +52,9 @@ Check the machine configuration
       bash docker/docker_setup.sh
 
 .. note:: 
-   As part of the Docker setup, the ``qcom-download-utils`` directory structure is shown in the following figure:
+   The directory structure of ``qcom-download-utils``, as it pertains to the Docker setup, is depicted in the following figure:
 
-          .. image:: ../../media/k2c-qli-build-ga/qcom-download-utils-folder.png
+   .. image:: ../../media/k2c-qli-build-ga/qcom-download-utils-folder.png
 
 .. _section_opk_sh4_w1c:
 
@@ -69,13 +68,13 @@ Create a Yocto Docker image and build:
    (**qcom-6.6.38-qli.1.2-ver.1.0_22.04**). This Docker image is used to
    create the container environment to run the Yocto build.
 
-   **Dockertag**: Release folder in lower case letters appended by the
+   **Dockertag**: Release folder in lowercase letters appended by the
    Dockerfile OS version to enable easy identification of the release
-   build with Dockerfile (Docker does not allow upper case letters in
+   build with Dockerfile (Docker does not allow uppercase letters in
    the Dockertag).
 
    .. note:: 
-      See :ref:`docker troubleshooting <section_hkm_2dc_p1c_vinayjk_02-29-24-1641-18-155>` for troubleshooting Docker issues.
+      To troubleshoot Docker issues, see :ref:`docker troubleshooting <section_hkm_2dc_p1c_vinayjk_02-29-24-1641-18-155>`.
 
    ::
 
@@ -86,14 +85,14 @@ Create a Yocto Docker image and build:
 
    ::
 
-      # Error 1: cache related issue.
-         # If you are facing issue with the docker build command, try using --no-cache option. This option will force rebuilding of layers already available
+      # Error 1: Cache-related issue.
+         # If you are facing issues with the docker build command, try using --no-cache option. This option forces rebuilding of the layers that are already available
          $ bash docker/docker_build.sh -n --no-cache -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.38-qli.1.2-ver.1.0_22.04
 
-      # Error2: response from daemon: Get "https://registry-1.docker.io/v2/": http: server gave HTTP response to HTTPS client
-         # Check with your IT administrator to acquire ``registry-mirrors`` URL and replace ``<my-docker-mirror-host>`` in the following solution 
+      # Error2: Response from daemon: Get "https://registry-1.docker.io/v2/": http: server gave HTTP response to HTTPS client
+         # Check with your IT administrator to acquire ``registry-mirrors`` URL and replace <my-docker-mirror-host>`` in the following solution 
          # Using a tab instead of space and other invisible white-space characters may break the proper work of json configuration files
-         # and later may lead to Docker service failing to start
+         # and later may lead to the Docker service failing to start
 
          # Solution:
            sudo vim /etc/docker/daemon.json
@@ -144,7 +143,7 @@ Build QIMP SDK image
          bash
          docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.38-qli.1.2-ver.1.0_22.04 /bin/bash
 
-   #. Clone QIMP SDK layer into the workspace:
+   #. Clone the QIMP SDK layer into the workspace:
 
       ::
 
@@ -233,4 +232,4 @@ Rebuild
 Flash
 ^^^^^^^
 
-Flash software images to the device using :doc:`Flash images for registered users <flash_images>`.
+To flash the software images to the device, see :doc:`Flash images for registered users <flash_images>`.

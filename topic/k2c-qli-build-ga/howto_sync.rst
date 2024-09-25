@@ -44,22 +44,17 @@ How does QSC-CLI work?
 
 1. **Setup**
 
-   QSC-CLI installs Docker and sets up the necessary git configuration.
+   QSC-CLI installs Docker and configures git.
 
 2. **Sync**
 
-   QSC-CLI downloads the firmware sources as needed based on the input
-   parameters and completes the Qualcomm Yocto layers build.
+   QSC-CLI downloads the firmware sources and the Qualcomm Yocto layers, based on the input parameters.
 
 3. **Build**
 
-   QSC-CLI builds the Qualcomm firmware as needed and also completes the
-   build for the Qualcomm Yocto layers.
+   QSC-CLI builds the necessary Qualcomm firmware and the Qualcomm Yocto layers.
 
-4. Internally, QSC-CLI implements the standalone commands covered in the
-   :doc:`GitHub workflow (firmware and extras) <build_addn_info>` and
-   leverages the prebuilt Docker images for the respective Qualcomm
-   style software images. For example, ``LE.QCLINUX.1.0.r1``.
+4. Internally, QSC-CLI implements the standalone commands covered in the :doc:`GitHub workflow (firmware and extras) <build_addn_info>` and leverages the prebuilt Docker images for the respective Qualcomm style software images. For example, ``LE.QCLINUX.1.0.r1``.
 
 .. _section_gcp_5hh_q1c_vinayjk_03-04-24-2335-11-750:
 

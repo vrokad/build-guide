@@ -14,9 +14,7 @@ Install QSC using a GUI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. Use your Qualcomm ID to log in to
-   https://softwarecenter.qualcomm.com, then click **Download Software
-   Center**. The QSC Debian package (``.deb``) downloads to your
-   machine.
+   https://softwarecenter.qualcomm.com, then click **Download Software Center**. The QSC Debian package (``.deb``) is downloaded to your machine.
 
    .. image:: ../../media/k2c-qli-build-ga/qcs_launcher_gui.png
 

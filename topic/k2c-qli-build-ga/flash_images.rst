@@ -15,9 +15,7 @@ Registered users must flash the software using the following steps:
 Install PCAT and QUD
 -----------------------------------------
 
-To detect connected devices and flash software builds, ensure that the
-Qualcomm PCAT and QUD tools are installed on the host machine. Run the
-following commands to use ``qpm-cli`` to install PCAT and QUD:
+To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host machine. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
 
 ::
 

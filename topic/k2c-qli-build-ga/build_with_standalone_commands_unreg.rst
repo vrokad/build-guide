@@ -136,7 +136,7 @@ The following table shows an example mapping of Yocto layers to the manifest rel
      - 1.0: Milestone release
      - 1.1.1: Patch release associated with the milestone release
 
-   - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
+   - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 .. _section_sk2_xk2_fbc:
 

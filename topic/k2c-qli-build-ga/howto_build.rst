@@ -185,11 +185,11 @@ Build a standalone QDL
 
 **Prerequisites:**
 
--  The modules ``make`` and ``gcc`` must be available.
+  - The modules ``make`` and ``gcc`` must be available.
 
--  Install the following dependent packages:
+  - Install the following dependent packages:
 
-   ::
+    ::
 
       sudo apt-get install git libxml2-dev libusb-1.0-0-dev pkg-config
 

@@ -89,15 +89,15 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 .. note:: Use ADB only if the device has a preloaded build.
 
 1. `Install
-   QUD <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#sub$qsg_instal_qud>`__
+   QUD <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#install-qud-on-linux-host>`__
    on the host device.
 
 2. `Install
-   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#sub$qsg_install_adb>`__
+   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#install-adb>`__
    on the host device.
 
 3. `Connect
-   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#sub$qsg_connect_to_adb>`__
+   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/additional_setup.html#connect-to-adb>`__
    to the device.
 
 4. Move the device to EDL mode:
@@ -249,7 +249,7 @@ Flash software using QDL
           To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
 
 
-.. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#sub$check_sw_version_uart>`__.
+.. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
 
 Flash software using PCAT
 ------------------------------------
@@ -332,5 +332,5 @@ Flash software using PCAT
        Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
 
 .. note::
-   -  The device reboots on successful completion of the flashing procedure. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#sub$check_sw_version_uart>`__.
+   -  The device reboots on successful completion of the flashing procedure. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
    -  To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.

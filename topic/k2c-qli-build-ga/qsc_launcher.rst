@@ -21,7 +21,7 @@ Software download
 
    .. note:: See `hardware SoCs (chipset) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-115/soc.html>`__ that are supported on Qualcomm Linux.
 
-  .. image:: ../../media/k2c-qli-build-ga/specify_env.png
+   .. image:: ../../media/k2c-qli-build-ga/specify_env.png
 
 4. Click **Next**. The **Select Resources** page appears.
    
@@ -36,7 +36,7 @@ Software download
       .. note::
          
          - For information on the supported distributions for your hardware SoCs, see the table *Access Controlled Distribution* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
-         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.         
+         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.        
          - For information on the QIMP and QIRP SDKs, see the following guides:
 
            - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51>`__
@@ -46,6 +46,7 @@ Software download
 
    .. image:: ../../media/k2c-qli-build-ga/software_download_complete.png
 
+   
    .. note:: You can also track the download progress through the **Downloads** option in the top menu bar.
 
    You do not have to compile flashable binaries. If you have selected a flashable binary, follow the on-screen instructions to flash to a connected device.
@@ -63,7 +64,7 @@ Build and flash default configuration
 
    .. note:: For information on the default configurations, see the table *Default values of "MACHINE" and "QCOM_SELECTED_BSP" parameters for QSC* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
-.. _launcher_compile_step:
+   .. _launcher_compile_step:
 
    a. After the download is complete, select **Compile** to start compiling. Depending on the size of the downloaded software and the host machine configuration, the compilation process may take a few hours.
 
@@ -73,6 +74,7 @@ Build and flash default configuration
 
       .. image:: ../../media/k2c-qli-build-ga/QSC_compile_progress.png
 
+   
    .. note:: BitBake fetch errors are typically intermittent fetch failures. To resolve these errors, retry :ref:`step 1a <launcher_compile_step>`. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
 
 2. Flash the software with the default configuration.
@@ -95,7 +97,7 @@ Build and flash default configuration
 
    e. Click **Done**.
 
-      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#sub$check_sw_version_uart>`__.
+      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
    
    f. To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
 
@@ -146,5 +148,5 @@ To build your own configuration, compile the build for default machine configura
 
         For example, ``<Base Workspace Path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-core-kit/qcom-multimedia-image``.
 
-      - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#sub$check_sw_version_uart>`__.
+      - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
       - To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.

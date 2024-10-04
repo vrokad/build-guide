@@ -154,7 +154,7 @@ The following tables describe the firmware distributions that can be downloaded 
 
        ``meta-qcom-qim-product-sdk``
 
-.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
+.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 .. _Mapping_firmware_table:
 

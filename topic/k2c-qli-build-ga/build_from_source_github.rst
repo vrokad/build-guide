@@ -142,7 +142,7 @@ The following table shows an example mapping of the Yocto layers to the manifest
 
 .. note::
    
-   - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#id7>`__.
+   - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
    
    - For information on building the ``meta-qcom-extras`` add-on layer and select firmware sources, see :doc:`GitHub workflow (firmware and extras) <build_addn_info>`.
 

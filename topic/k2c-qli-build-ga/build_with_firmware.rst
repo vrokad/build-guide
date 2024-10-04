@@ -208,7 +208,7 @@ The **Git command** column (see :ref:`Mapping of firmware distributions and git 
 
 .. note:: 
    - The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` directory.
-   - For the latest ``<firmware release tag>``, see the *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+   - For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 .. _section_v5m_4gq_p1c_vinayjk_03-02-24-1519-24-381:
 
@@ -728,8 +728,7 @@ Build BSP image with extras
       # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/).
 
    .. note:: For the ``<manifest release tag>`` and
-            ``<meta-qcom-extras release tag>`` information, see the
-            *Build-critical release tags* section in the `Release
+            ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release
             Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 #. Set up the Yocto build:
@@ -816,7 +815,7 @@ Build QIMP SDK image with extras
       git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.38-QLI.1.2-Ver.1.1_qim-product-sdk-1.1.2 layers/meta-qcom-qim-product-sdk
 
    .. note:: For the ``<manifest release tag>`` and
-            ``<meta-qcom-extras release tag>`` information, see the *Build-critical release tags* section in the `Release
+            ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release
             Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 #. Set up the Yocto build:
@@ -919,7 +918,7 @@ Build QIRP SDK image with extras
       # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.38-QLI.1.2-Ver.1.1_qim-product-sdk-1.1.2
 
    .. note:: 
-       For the ``<manifest release tag>``, ``<meta-qcom-extras release tag>``, and ``<meta-qcom-qim-product-sdk release tag>`` information, see the *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
+       For the ``<manifest release tag>``, ``<meta-qcom-extras release tag>``, and ``<meta-qcom-qim-product-sdk release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
 
 #. Set up the Yocto build:
 

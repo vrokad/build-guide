@@ -155,7 +155,7 @@ Build BSP image
       repo sync
 
    .. note::  
-      For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+      For the latest ``<manifest release tag>``, see the section *Build-Critical Release Tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 #. Set up the build environment:
 
@@ -195,7 +195,7 @@ Build QIMP SDK image
 
    .. note:: 
       - The ``<manifest release tag>`` for the QIMP SDK build is the same as the BSP build. Clone the QIMP SDK layer on top of the BSP build. 
-      - For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+      - For the latest ``<manifest release tag>``, see the section *Build-Critical Release Tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
    ::
 
@@ -264,7 +264,7 @@ Build QIRP SDK image
       # Example, <manifest release tag> is qcom-6.6.38-QLI.1.2-Ver.1.1.xml
       repo sync
 
-   .. note:: For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+   .. note:: For the latest ``<manifest release tag>``, see the section *Build-Critical Release Tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 #. Download the QIRP SDK layers into the BSP build ``<WORKSPACE DIR>`` directory:
 
@@ -322,7 +322,7 @@ Build real-time Linux image
       # Example, <manifest release tag> is qcom-6.6.38-QLI.1.2-Ver.1.1.xml
       repo sync
 
-   .. note::  For the latest ``<manifest release tag>``, see the *Build-Critical Release Tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+   .. note::  For the latest ``<manifest release tag>``, see the section *Build-Critical Release Tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 #. Clone the real-time Linux layer into the workspace:
 

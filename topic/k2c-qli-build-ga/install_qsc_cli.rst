@@ -3,8 +3,6 @@
 Install QSC CLI
 --------------------
 
-.. note:: QSC CLI supports x86 architecture only.
-
 1. Install curl (if not installed already):
 
    ::

@@ -76,8 +76,7 @@ How to download layers for the QIMP SDK build using the manifest release tag
 
 Download layers for the QIMP SDK:
 
-.. note:: For the latest ``<manifest release tag>``, see the
-          *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+.. note:: For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 ::
 
@@ -99,7 +98,7 @@ How to download layers for the QIRP SDK build by using manifest release tag
 Download layers for the QIRP SDK:
 
 .. note:: 
-   For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release  Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+   For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release  Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 ::
 
@@ -120,7 +119,7 @@ How to download layers for the real-time Linux build by using manifest release t
 
 Download layers for the real-time Linux:
 
-.. note:: For the latest ``<manifest release tag>``, see the *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+.. note:: For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
 
 ::
 

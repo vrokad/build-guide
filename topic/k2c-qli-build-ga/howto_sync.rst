@@ -143,8 +143,7 @@ This includes the following steps:
       repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <release tag>
       repo sync
 
-   .. note:: For the ``<manifest release tag>`` information, see the
-             *Build-critical release tags* section in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
+   .. note:: For the ``<manifest release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
              An example ``<manifest release tag>`` is ``qcom-6.6.38-QLI.1.2-Ver.1.1.xml``.
 
 2. Set up the build environment:

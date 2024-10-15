@@ -156,7 +156,7 @@ Run the commands to connect to Docker for your environment setup and then use th
    # Make code changes
 
 .. note:: 
-   Get to a Docker shell as mentioned in :ref:`How to generate eSDK? <section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265>`.
+   Get to a Docker shell as mentioned in :ref:`Generate an eSDK <section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265>`.
 
 -  Rebuild using your source changes:
 
@@ -324,7 +324,7 @@ Download the Platform eSDK
 
    |imageLayerWorkspace|
 
-   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedure <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51/advanced-procedure.html>`__.
+   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedures <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51/advanced-procedure.html>`__.
 
 7. Run the following command to set the ``ESDK_ROOT`` variable:
 

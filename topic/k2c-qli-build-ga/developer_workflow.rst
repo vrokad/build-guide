@@ -13,7 +13,7 @@ Sync and build with real-time Linux
 `GitHub <https://github.com/quic-yocto/meta-qcom-realtime>`__ and it is
 built on top of the BSP build image. For more information on this layer,
 see
-`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#meta-qcom-hwe>`__
+`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#meta-qcom-realtime>`__
 from the `Qualcomm Linux Yocto
 Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27>`__.
 

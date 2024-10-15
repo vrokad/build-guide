@@ -19,7 +19,7 @@ Software download
 
 3. On the **Specify Environment** page, select the appropriate values for **Category**, **Chipset**, **Host Operating System**, and **Target Operating System**.
 
-   .. note:: See `hardware SoCs (chipset) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-115/soc.html>`__ that are supported on Qualcomm Linux.
+   .. note:: See `hardware SoCs (chipsets) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-115/soc.html>`__ that are supported on Qualcomm Linux.
 
    .. image:: ../../media/k2c-qli-build-ga/specify_env.png
 

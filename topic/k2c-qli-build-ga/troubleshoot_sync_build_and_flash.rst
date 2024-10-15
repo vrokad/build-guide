@@ -391,7 +391,7 @@ Build
 
    128 is a masking error and this error needs further triage as it could be a network issue at your end or a genuine issue accessing
    Qualcomm or upstream mirrors. As a workaround for this error, 
-   see :ref:`do_fetch: BitBake Fetcher Error: FetchError(‘Unable to fetch URL from any source’) <do_fetch_error_1>`. You can triage it further by
+   see :ref:`BitBake Fetcher Error <do_fetch_error_1>`. You can triage it further by
    following the subsequent instructions to dump verbose logs during fetch.
 
    By default, verbose logging is not enabled for Yocto git fetch. To

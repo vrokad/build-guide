@@ -182,7 +182,7 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
 
 Ensure that a :ref:`Wi-Fi connection <howto_setup_wifi_sub>` is established before connecting to SSH.
 
-1. Find the IP address of the RB3 Gen 2 device in the UART console on the Windows host:
+1. Find the IP address of the RB3 Gen 2 device in the UART console on the Linux host:
 
    ::
 
@@ -217,7 +217,7 @@ available at the ``/lib/firmware`` directory.
 
 .. note:: 
    - If the ``renesas_usb_fw.mem`` firmware is not available at the ``/lib/firmware`` directory, then :ref:`connect to UART <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>` and :ref:`enable the Wi-Fi <howto_setup_wifi_sub>`.
-   - After getting the SSH and the IP address, :ref:`update PCIe to USB controller firmware <section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149>`.
+   - After getting the SSH and the IP address, :ref:`update USB and Ethernet controller firmware <section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149>`.
 
 To check if USB to ETH controller is enumerated, run the following
 command:

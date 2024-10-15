@@ -134,7 +134,7 @@ syncs the Yocto layers and prepares the Yocto workspace to be built.
 This includes the following steps:
 
 .. note::
-     Get to a Docker shell as mentioned in :ref:`How to generate eSDK <section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265>`.
+     Get to a Docker shell as mentioned in :ref:`Generate an eSDK <section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265>`.
 
 1. Download a new release:
 

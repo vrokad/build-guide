@@ -113,7 +113,6 @@ For Ubuntu 22.04, you may encounter an issue while installing QUD, where you mig
             NA | NA          | EDL          | BE116704      | be116704          | Qualcomm USB Composite Device:QUSB_BULK_CID:042F_SN:BE116704
 
       - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
-      - To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
 
 .. _build_own_config:
 
@@ -168,5 +167,10 @@ To build your own configuration, you must compile the build for default machine 
 
         For example, ``<Base Workspace Path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-core-kit/qcom-multimedia-image``.
 
-      - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
-      - To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
+Connect to UART shell and Network
+----------------------------------
+After flashing and booting the device, follow these steps to connect to UART shell, Network and Login via SSH.
+ 
+* :ref:`Connect to UART shell <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>`
+* :ref:`Connect to Network <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`
+* :ref:`Login via SSH <howto_login_via_ssh>`

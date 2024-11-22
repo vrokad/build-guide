@@ -101,8 +101,8 @@ Connect to a UART shell
 
 .. _section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279:
 
-Use SSH
-^^^^^^^^^^
+Connect to Network
+^^^^^^^^^^^^^^^^^^
 
 .. _howto_setup_wifi_sub:
 
@@ -180,7 +180,10 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
 
       ping qualcomm.com
 
-**Connect to SSH**
+.. _howto_login_via_ssh:
+
+**Login via SSH**
+^^^^^^^^^^^^^^^^^
 
 Ensure that a :ref:`Wi-Fi connection <howto_setup_wifi_sub>` is established before connecting to SSH.
 

@@ -229,6 +229,7 @@ Flash software using QDL
       LOG: INFO: bsp_target_reset() 1
 
    After a successful flashing operation, run the ``lsusb`` command to see the device information on the terminal window as shown in line 4 of the following message:
+   
 
    .. container:: screenoutput
       
@@ -237,18 +238,13 @@ Flash software using QDL
        Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
        Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
+   To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
+
 .. note:: If flashing fails, perform the following steps and retry the flashing procedure:
 
           1. Power off the device.
           2. Disconnect from the host.
           3. Reboot the host.
-
-          Do not move the QDL tool from the ``<workspace_path>`` location to an alternate path or the host machine. If you must use the standalone QDL, see :ref:`Build a standalone QDL <how_to_build_qdl_standalone>`.
-          
-          To connect to the device, see :ref:`Use SSH <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`.
-
-
-.. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
 
 Flash software using PCAT
 ------------------------------------
@@ -328,3 +324,13 @@ Flash software using PCAT
        Bus 002 Device 003: ID 05c6:9135 Qualcomm, Inc. qcs6490-rb3gen2-vision-kit
        Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
        Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+
+   The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
+
+Connect to UART shell and Network
+----------------------------------
+After flashing and booting the device, follow these steps to connect to UART shell, Network and Login via SSH.
+ 
+* :ref:`Connect to UART shell <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>`
+* :ref:`Connect to Network <section_hmw_vsh_p1c_vinayjk_03-01-24-1110-45-279>`
+* :ref:`Login via SSH <howto_login_via_ssh>`

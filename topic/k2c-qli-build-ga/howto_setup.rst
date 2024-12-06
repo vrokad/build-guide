@@ -180,10 +180,9 @@ To update the Wi-Fi configuration, perform the following from the debug :ref:`UA
 
       ping qualcomm.com
 
-.. _login_using_ssh:
+.. _use-ssh:
 
 **Log in using SSH**
-^^^^^^^^^^^^^^^^^^^^^
 
 Ensure that a :ref:`Wi-Fi connection <howto_setup_wifi_sub>` is established before connecting to SSH.
 

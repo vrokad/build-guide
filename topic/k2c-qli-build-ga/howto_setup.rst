@@ -18,7 +18,7 @@ Connect to a UART shell
 
          .. image:: ../../media/k2c-qli-build-ga/micro_usb_port.jpg
 
-      .. group-tab:: QCS9075/QCS8300
+      .. group-tab:: QCS9075/QCS8275
 
          To set up the debug UART connection and view the diagnostic messages, connect the debug-USB cable from the debug-USB port on the QCS9075 device to the Linux host.
 
@@ -255,10 +255,10 @@ Ensure that a :ref:`Wi-Fi connection <howto_setup_wifi_sub>` is established befo
 Configure Ethernet with RJ45 port
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Ethernet/RJ45 port is enabled as a downstream port of PCIe to USB controller (``renesas``). Ensure that the ``renesas_usb_fw.mem`` file is available at the ``/lib/firmware`` directory.
+Ethernet/RJ45 port is enabled as a downstream port of PCIe to USB controller (``renesas``). Ensure that the ``renesas_usb_fw.mem`` file is available at the ``var/usbfw`` directory.
 
 .. note:: 
-   - If the ``renesas_usb_fw.mem`` firmware is not available at the ``/lib/firmware`` directory, then :ref:`connect to UART <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>` and :ref:`enable the Wi-Fi <howto_setup_wifi_sub>`.
+   - If the ``renesas_usb_fw.mem`` firmware is not available at the ``var/usbfw`` directory, then :ref:`connect to UART <section_ags_ssh_p1c_vinayjk_03-01-24-1109-49-684>` and :ref:`enable the Wi-Fi <howto_setup_wifi_sub>`.
    - After getting the SSH and the IP address, :ref:`update USB and Ethernet controller firmware <section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149>`.
 
 To check if the USB to ETH controller is enumerated, run the following command:

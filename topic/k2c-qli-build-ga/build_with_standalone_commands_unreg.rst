@@ -105,7 +105,7 @@ The following table shows an example mapping of Yocto layers to the manifest rel
         - ``meta-qcom-qim-product-sdk``
      - BSP build + QIRP SDK build:
        
-       ``qcom-6.6.38-QLI.1.2-Ver.1.1_robotics-product-sdk-1.1.xml``
+       ``qcom-6.6.52-QLI.1.3-Ver.1.0_robotics-product-sdk-1.0.xml``
      - ``qcom-robotics-ros2-humble``
 
 .. note::
@@ -115,8 +115,8 @@ The following table shows an example mapping of Yocto layers to the manifest rel
     
      For example, the manifest release tag ``qcom-6.6.52-QLI.1.3-Ver.1.0.xml`` denotes the following:
      
-     - 6.6.38: Linux Kernel
-     - QLI.1.2: Qualcomm Linux v1.2
+     - 6.6.52: Linux Kernel
+     - QLI.1.3: Qualcomm Linux v1.3
      - 1.0: Milestone release
 
    - Syntax for the additional productization manifest release tag:
@@ -125,9 +125,9 @@ The following table shows an example mapping of Yocto layers to the manifest rel
 
      For example, the additional productization manifest release tag ``qcom-6.6.52-QLI.1.3-Ver.1.0_qim-product-sdk-1.1.1.xml`` denotes the following:
      
-     - 6.6.38: Linux Kernel
-     - QLI.1.2: Qualcomm Linux v1.2
-     - qim-product-sdk-1.1.1: QIMP SDK release on top of QLI.1.2
+     - 6.6.52: Linux Kernel
+     - QLI.1.3: Qualcomm Linux v1.3
+     - qim-product-sdk-1.1.1: QIMP SDK release on top of QLI.1.3
 
        Other product/customization examples:
 

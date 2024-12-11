@@ -137,7 +137,7 @@ The following table shows an example mapping of the Yocto layers to the manifest
          - ``meta-qcom-qim-product-sdk``
        - BSP build + QIRP SDK build:
          
-         ``qcom-6.6.38-QLI.1.2-Ver.1.1_robotics-product-sdk-1.1.xml``
+         ``qcom-6.6.52-QLI.1.3-Ver.1.0_robotics-product-sdk-1.0.xml``
        - ``qcom-robotics-ros2-humble``
 
 .. note::

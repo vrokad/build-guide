@@ -267,7 +267,7 @@ Build firmware
 
             ::
 
-               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/sectoolsv2/ext/Linux/sectools
+               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
                export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
@@ -477,8 +477,6 @@ Build firmware
 
          ::
 
-            # cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build
-            # An example <product> is QCM6490.LE.1.0, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/)
             cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/build
             python build.py --imf
 
@@ -535,7 +533,7 @@ Build firmware
 
             ::
 
-               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/sectoolsv2/ext/Linux/sectools
+               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux/sectools
                export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
@@ -723,8 +721,6 @@ Build firmware
 
          ::
 
-            # cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build
-            # An example <product> is QCS9100.LE.1.0, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/)
             cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/build
             python build.py --imf
 
@@ -735,7 +731,7 @@ Build firmware
             -  ``QCS9100_dspso.zip``
             -  ``QCS9100_fw.zip``
 
-      .. group-tab:: QCS8300
+      .. group-tab:: QCS8275
 
          .. rubric:: Prerequisites
 
@@ -781,7 +777,7 @@ Build firmware
 
             ::
 
-               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/sectoolsv2/ext/Linux/sectools
+               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux/sectools
                export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
@@ -789,7 +785,7 @@ Build firmware
             ::
 
                qpm-cli --extract hexagon8.6 --version 8.6.05.2
-               qpm-cli --extract hexagon8.6 --version 8.7.02.1
+               qpm-cli --extract hexagon8.7 --version 8.7.02.1
                export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                echo $HEXAGON_ROOT
 
@@ -968,17 +964,15 @@ Build firmware
 
          ::
 
-            # cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build
-            # An example <product> is QCS9100.LE.1.0, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/)
-            cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/build
+            cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/build
             python build.py --imf
 
          .. note:: 
-            Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/build/ufs/bin`` directory:
+            Firmware prebuild is successful if the following zip files are generated in the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/build/ufs/bin`` directory:
                      
-            -  ``QCS9100_bootbinaries.zip``
-            -  ``QCS9100_dspso.zip``
-            -  ``QCS9100_fw.zip``            
+            -  ``QCS8300_bootbinaries.zip``
+            -  ``QCS8300_dspso.zip``
+            -  ``QCS8300_fw.zip``
 
 .. _section_unn_4gq_p1c_vinayjk_03-02-24-1519-24-874:
 

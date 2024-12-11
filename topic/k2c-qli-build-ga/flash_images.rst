@@ -158,7 +158,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
                    Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
 
-      .. group-tab:: QCS9075/QCS8300
+      .. group-tab:: QCS9075/QCS8275
 
          1. Switch on the dip switch S5-4 to put the device in the EDL mode.
 
@@ -201,7 +201,7 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
    .. note::
    
       - The ``qpm-cli --help`` command lists the help options.
-      - For Ubuntu 22.04, you might encounter an issue when installing QUD. To ensure a successful installation, you may need to enroll the public key on your Linux host. For additional details, follow the steps outlined in the ``signReadme.txt`` file available at ``/opt/QCT/sign/``.
+      - For Ubuntu 22.04, you might encounter an issue when installing QUD. To ensure a successful installation, you may need to enroll the public key on your Linux host. For additional details, follow the steps outlined in the ``signReadme.txt`` file available at ``/opt/QTI/sign/``.
 
 #. Verify whether PCAT can detect the device in EDL mode:
 
@@ -375,17 +375,19 @@ Flash software using PCAT
 ------------------------------------
 .. note:: This procedure is available for registered users only.
 
-1. To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host machine. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
+1. :ref:`Install QSC CLI <one_time_host_setup>`.
+2. To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host machine. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
 
    ::
 
       qpm-cli --login
-      qpm-cli --install pcat --activate-default-license
+      qpm-cli --install quts --activate-default-license
       qpm-cli --install qud --activate-default-license
+      qpm-cli --install pcat --activate-default-license
 
    .. note:: For Ubuntu 22.04, you may encounter an issue while installing QUD, where you might be asked to enroll the public key on your Linux host for a successful QUD installation. For additional details, follow the steps provided in the README file available in the ``/opt/QTI/sign/signReadme.txt`` directory.
 
-2. Check if the ``QTI_HS-USB_QDLoader`` driver is available in the installed directory:
+3. Check if the ``QTI_HS-USB_QDLoader`` driver is available in the installed directory:
 
    ::
 
@@ -399,7 +401,7 @@ Flash software using PCAT
 
           crw-rw-rw- 1 root 242 0 Dec 10 10:51 /dev/QTI_HS-USB_QDLoader_9008_3-8:1.0
 
-3. Verify if the device entered the QDL mode:
+4. Verify if the device entered the QDL mode:
 
    ::
 
@@ -413,7 +415,7 @@ Flash software using PCAT
 
           Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
 
-4. Check if the device is recognized by the PCAT:
+5. Check if the device is recognized by the PCAT:
 
    ::
 
@@ -429,7 +431,7 @@ Flash software using PCAT
          ID | DEVICE TYPE | DEVICE STATE | SERIAL NUMBER | ADB SERIAL NUMBER | DESCRIPTION
          NA | NA          | EDL          | BE116704      | be116704          | Qualcomm USB Composite Device:QUSB_BULK_CID:042F_SN:BE116704
 
-5. Flash the build:
+6. Flash the build:
 
    ::
 

@@ -327,7 +327,7 @@ Download the Platform eSDK
 
    |imageLayerWorkspace|
 
-   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedures <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51/advanced-procedure.html>`__.
+   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedures <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51/advanced-procedure.html>`__.
 
 7. Run the following command to set the ``ESDK_ROOT`` variable:
 
@@ -342,7 +342,7 @@ Download the Platform eSDK
       export ESDK_ROOT=/local/mnt/workspace/Platform_eSDK_plus_QIM
 
 The QIMP SDK installation is now complete. To develop an application for
-the device, see `Develop your first application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51/content-develop-your-first-application.html>`__.
+the device, see `Develop your first application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51/content-develop-your-first-application.html>`__.
 
 
 

@@ -5,12 +5,15 @@ Introduction
 This guide describes how to configure, download, compile, and flash Qualcomm\ :sup:`®` Linux\ :sup:`®` and the associated firmware on supported devices.
 
 Qualcomm recommends that you read the `Qualcomm Linux Yocto
-Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27>`__ before starting your build.
+Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27>`__ before starting your build.
 
-Users can download prebuilt flashable images or sync and build as described in the following sections.
+Users can do any of the following:
+ 
+- Download prebuilt images and flash
+- Sync, build software, and flash
 
-Download images
-----------------
+Download prebuilt images and flash
+----------------------------------------
 
 - Download prebuilt flashable images (includes Platform eSDK) from the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
 
@@ -18,8 +21,8 @@ Download images
 
 - To flash the prebuilt flashable images, see :doc:`Flash images <flash_images>`.
 
-Sync and build
----------------
+Sync, build software, and flash
+---------------------------------
 
 .. _section_rtp_vbg_qbc_vinayjk_06-05-24-1835-16-723:
 
@@ -51,7 +54,14 @@ Registered users can use any one of the following three methods to sync and buil
      - .. centered:: :doc:`Build with QSC CLI <build_from_source_QSC_CLI>`
      - .. centered:: :doc:`GitHub workflow for registered users <build_from_source_github_intro>`
 
-.. figure:: ../../media/k2c-qli-build-ga/explore_QSC.svg
-   :align: center
+.. only:: html
+ 
+   .. figure:: ../../media/k2c-qli-build-ga/explore_QSC_html.svg
+      :align: center
 
-.. note:: See `hardware SoCs <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-115/soc.html>`__ that are supported on Qualcomm Linux.
+.. only:: latex
+ 
+   .. figure:: ../../media/k2c-qli-build-ga/explore_QSC_pdf.svg
+      :align: center
+
+.. note:: See `hardware SoCs <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-115/soc.html>`__ that are supported on Qualcomm Linux.

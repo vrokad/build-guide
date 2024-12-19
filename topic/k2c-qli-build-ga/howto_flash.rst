@@ -57,7 +57,7 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
 
    ::
 
-      PCAT -PLUGIN SD -DEVICE BE116704 -DEVICEPROG <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/prog_firehose_ddr.elf -MEMORYTYPE UFS -UFSPROV TRUE -UFSPROVXML <downloaded_provision_XML_file>
+      PCAT -PLUGIN SD -DEVICE [PCAT SERIAL NUMBER] -DEVICEPROG <provision_download_path>/prog_firehose_ddr.elf -MEMORYTYPE UFS -UFSPROV TRUE -UFSPROVXML <provision_download_path>/provision_1_3.xml
 
 .. _flash_CDT:
 

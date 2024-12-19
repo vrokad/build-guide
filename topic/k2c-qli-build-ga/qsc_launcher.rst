@@ -22,15 +22,16 @@ Software download
       ::
 
          qpm-cli --login
-         qpm-cli --install pcat --activate-default-license
+         qpm-cli --install quts --activate-default-license
          qpm-cli --install qud --activate-default-license
+         qpm-cli --install pcat --activate-default-license
 
       The ``qpm-cli --help`` command lists the help options.
 
       For Ubuntu 22.04, you may encounter an issue while installing QUD where you are asked to enroll the public key on your Linux host for a
       successful QUD installation. For more details, follow the steps provided in the ``signReadme.txt`` file available at the ``/opt/QTI/sign/`` directory.
 
-2. Use your registered email ID to log in to the QSC desktop application. The QSC Launcher dashboard page appears.
+2. Use your registered email ID to log in to the QSC desktop application. The QSC Launcher dashboard page (for example, when QCS6490 development kit is connected) appears as shown in the following image:
 
    .. image:: ../../media/k2c-qli-build-ga/start_launcher_ab.png
 
@@ -39,7 +40,7 @@ Software download
 
 3. On the **Specify Environment** page, select the appropriate values for **Category**, **Chipset**, **Host Operating System**, and **Target Operating System**.
 
-   .. note:: See `hardware SoCs (chipsets) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-115/soc.html>`__ that are supported on Qualcomm Linux.
+   .. note:: See `hardware SoCs (chipsets) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-115/soc.html>`__ that are supported on Qualcomm Linux.
 
    .. image:: ../../media/k2c-qli-build-ga/specify_env.png
 
@@ -56,11 +57,11 @@ Software download
       .. note::
          
          - For information on the supported distributions for your hardware SoCs, see the table *Access Controlled Distribution* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240929204440/>`__.
-         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.        
+         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.        
          - For information on the QIMP and QIRP SDKs, see the following guides:
 
-           - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51>`__
-           - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-265>`__
+           - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51>`__
+           - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-265>`__
 
 5. Click **Download** to download the selected compilable distribution or flashable binary. After the software is downloaded successfully, a *Download complete* status appears.
 
@@ -117,7 +118,9 @@ Build and flash default configuration
 
    e. Click **Done**.
 
-      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/ubuntu_host.html#check-software-version>`__.
+      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check software version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/ubuntu_host.html#check-software-version>`__.
+
+   f. To establish UART and network connections, see :ref:`Connect to UART and network <connect_uart_network>`.
 
 .. _launcher_build_own_config:
 
@@ -166,4 +169,4 @@ To build your own configuration, compile the build for default machine configura
 
         For example, ``<Base Workspace Path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-core-kit/qcom-multimedia-image``.
 
-To establish UART and network connections, see :ref:`Connect to UART and network <connect_uart_network>`.
+4. To establish UART and network connections, see :ref:`Connect to UART and network <connect_uart_network>`.

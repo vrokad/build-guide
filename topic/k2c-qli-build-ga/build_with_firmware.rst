@@ -32,7 +32,7 @@ The following table describes the Qualcomm Yocto layers and release tags:
    *  
      - ``meta-qcom-robotics-sdk``
      - manifest release tag
-     - qcom-6.6.38-QLI.1.2-Ver.1.1_robotics-product-sdk-1.1.xml
+     - qcom-6.6.52-QLI.1.3-Ver.1.0_robotics-product-sdk-1.0.xml
    * - Licensed developers with authorized access
      - ``meta-qcom-extras``
      - meta-qcom-extras release tag
@@ -154,7 +154,7 @@ The following tables describe the firmware distributions that can be downloaded 
 
        ``meta-qcom-qim-product-sdk``
 
-.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 .. _Mapping_firmware_table:
 
@@ -533,7 +533,7 @@ Build firmware
 
             ::
 
-               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
                export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS9100.LE.1.0/common/sectoolsv2/ext/Linux
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
@@ -777,8 +777,8 @@ Build firmware
 
             ::
 
-               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux/sectools
-               export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8300.LE.1.0/common/sectoolsv2/ext/Linux               
+               export SECTOOLS=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCM6490.LE.1.0/common/sectoolsv2/ext/Linux/sectools
+               export SECTOOLS_DIR=<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/QCS8275.LE.1.0/common/sectoolsv2/ext/Linux               
 
          -  Install and set up Qualcomm\ :sup:`®` Hexagon\ :sup:`™` Processor:
 
@@ -980,7 +980,7 @@ Build BSP image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 BSP image build contains the software components for Qualcomm device support and value-added software features applicable to Qualcomm SoCs. It includes a reference distribution configuration for Qualcomm products. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
-For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 1. Download Qualcomm Yocto and the supporting layers with extras:
 
@@ -1068,7 +1068,7 @@ Build QIMP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The QIMP SDK is a collection of four standalone function SDKs, namely, IM SDK, Qualcomm® Neural Processing SDK, Qualcomm® AI Engine direct SDK, and the TensorFlow Lite runtime. It also includes reference applications that you can use to develop use cases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
-For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-51>`__.
+For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51>`__.
 
 1. Download the QIMP SDK layers, Qualcomm Yocto layer, and the supporting layers with
    extras:
@@ -1164,7 +1164,7 @@ Build QIRP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The QIRP SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm platforms. This SDK is applicable to the Qualcomm Linux releases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
-For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-265>`__.
+For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-265>`__.
 
 .. note:: Before you begin, clone the respective firmware for QIRP SDK, for example, ``qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk``.
 

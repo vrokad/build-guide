@@ -14,8 +14,9 @@ Install PCAT and QUD using ``qpm-cli``:
 ::
 
    qpm-cli --login
-   qpm-cli --install pcat --activate-default-license
+   qpm-cli --install quts --activate-default-license
    qpm-cli --install qud --activate-default-license
+   qpm-cli --install pcat --activate-default-license
 
 The ``qpm-cli --help`` command lists the help options.
 

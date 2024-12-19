@@ -29,7 +29,7 @@ Host machine requirements
        (equivalent or better)
      - 8-core CPU
      - 8-core CPU
-     - Git 1.8.3.1 or later versions
+     - Tar 1.28 or later versions
       
 
    * - 300 GB free disk space (swap partition > 32 GB)
@@ -52,6 +52,6 @@ Host machine requirements
 
 .. note:: To set up a virtual machine (VM) running Ubuntu 22.04 on
           Microsoft Windows or Apple Mac, see `Qualcomm Linux Virtual Machine
-          Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-41/>`__.
+          Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-41/>`__.
           Code compilation on a VM is a slow process and may take a few hours.
           Qualcomm recommends using an Ubuntu host machine for compilation.

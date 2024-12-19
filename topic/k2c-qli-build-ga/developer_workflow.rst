@@ -13,9 +13,9 @@ Sync and build with real-time Linux
 `GitHub <https://github.com/quic-yocto/meta-qcom-realtime>`__ and it is
 built on top of the BSP build image. For more information on this layer,
 see
-`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/platform_software_features.html#meta-qcom-realtime>`__
+`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#meta-qcom-realtime>`__
 from the `Qualcomm Linux Yocto
-Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27>`__.
+Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27>`__.
 
 To sync and build real-time Linux, see :ref:`Build real-time Linux image <section_k51_23b_wbc_vinayjk_06-26-24-1344-54-418>`.
 
@@ -58,7 +58,7 @@ your end. However, the following steps must be performed:
 Build a Qualcomm Linux kernel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See `building kernel image <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-3/yocto-kernel-support.html#build-kernel-image>`__.
+See `building kernel image <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-3/yocto-kernel-support.html#build-kernel-image>`__.
 
 .. _section_lb1_c5g_s1c_vinayjk_03-12-24-127-56-85:
 
@@ -66,7 +66,7 @@ Customize Qualcomm Yocto layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See `user
-customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-27/user_customizations.html>`__.
+customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/user_customizations.html>`__.
 
 .. _section_l2s_5qj_ybc_vinayjk_07-04-24-2052-5-755:
 
@@ -101,7 +101,7 @@ Download layers for the QIRP SDK build by using the manifest release tag
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.38-QLI.1.2-Ver.1.1_robotics-product-sdk-1.1.xml
+   # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.0_robotics-product-sdk-1.0.xml
    repo sync
 
 .. note:: 

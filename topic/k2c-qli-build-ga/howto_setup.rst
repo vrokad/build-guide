@@ -99,6 +99,10 @@ Connect to a UART shell
 
       mount -o rw,remount /
 
+Connect to ADB
+^^^^^^^^^^^^^^^^
+See `Install and connect to ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#install-adb>`__.
+
 .. _connect_to_network:
 
 Connect to the network
@@ -309,10 +313,10 @@ If you encounter USB or Ethernet connectivity issues on the RB3 Gen 2 device, co
 
 .. rubric:: Prerequisites
 
-- Ensure that the software is upgraded as described in `Update Software <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-253/set_up_the_device.html#ubuntu-up-sw>`__ before updating the Renesas firmware.
+- Ensure that the software is upgraded as described in `Update Software <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#ubuntu-up-sw>`__ before updating the Renesas firmware.
 - The device should be connected to the Linux host through the USB Type-C cable.
 
-.. note:: The following procedure is applicable only to Ubuntu 22.04 host. If you are using a Windows or Mac host, set up an Ubuntu virtual machine by following the instructions described in the `Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70015-41/getting-started.html>`__.
+.. note:: The following procedure is applicable only to Ubuntu 22.04 host. If you are using a Windows or Mac host, set up an Ubuntu virtual machine by following the instructions described in the `Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-41/getting-started.html>`__.
 
 1. Register and log in to `Renesas <https://www.renesas.com/>`__.
 

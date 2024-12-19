@@ -1,4 +1,4 @@
-.. _host_prerequisites:
+.. _host_machine_requirements:
 
 Host machine requirements
 ----------------------------
@@ -9,16 +9,22 @@ Host machine requirements
       :class: longtable table-wrap
 
       * - Configuration
+        - Tools
         - Permissions
 
       * - x86 machine
+        - Git 1.8.3.1 or later versions
         - :rspan:`4` A ``sudo`` permission is required to run a few commands
 
-      * - Quad-core CPU, for example, Intel i7-2600 at 3.4 GHz
-          (equivalent or better)         
+      * - Quad-core CPU, for example, Intel i7-2600 at 3.4 GHz
+          (equivalent or better)
+        - Tar 1.28 or later versions       
 
-      * - 300 GB free disk space (swap partition > 32 GB)
+      * - 300 GB free disk space (swap partition > 32 GB)
+        - Python 3.10.2 or later versions
          
-      * - 16 GB RAM
+      * - 16 GB RAM
+        - GCC 7.5 or later versions
          
       * - Ubuntu 22.04
+        - GNU Make 4.0 or later versions

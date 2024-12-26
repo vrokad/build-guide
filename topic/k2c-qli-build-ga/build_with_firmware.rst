@@ -497,7 +497,7 @@ Build firmware
       
                ::
 
-                  /build_kodiak.sh -c
+                  ./build_kodiak.sh -c -l <FIRMWARE_ROOT>/llvm/14.0.4/
          
          #. Build the image:
 
@@ -789,7 +789,7 @@ Build firmware
       
                ::
 
-                  /build_lemans.sh -c
+                  ./build_lemans.sh -c -l <FIRMWARE_ROOT>/llvm/14.0.4/
          
          #. Build the image:
 
@@ -1080,7 +1080,7 @@ Build firmware
       
                ::
 
-                  /build_monaco.sh -c
+                  ./build_monaco.sh -c -l <FIRMWARE_ROOT>/llvm/14.0.4/
          
          #. Build the image:
 

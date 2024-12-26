@@ -121,7 +121,7 @@ The following table shows an example mapping of the Yocto layers to the manifest
      
      - 6.6.52: Qualcomm Linux kernel
      - QLI.1.3: Qualcomm Linux v1.3
-     - 1.0: Milestone release
+     - 1.1: Milestone release
 
    - Syntax for the additional productization manifest release tag:
    
@@ -131,14 +131,14 @@ The following table shows an example mapping of the Yocto layers to the manifest
      
      - 6.6.52: Qualcomm Linux kernel
      - QLI.1.3: Qualcomm Linux v1.3
-     - qim-product-sdk-1.1.1: QIMP SDK release on top of QLI.1.3
+     - qim-product-sdk-1.1.2: QIMP SDK release on top of QLI.1.3
 
        Other product/customization examples:
 
        - *realtime-linux-1.0*
        - *robotics-product-sdk-1.1*
      - 1.0: Milestone release
-     - 1.1.1: Patch release associated with the milestone release
+     - 1.1: Patch release associated with the milestone release
 
    - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 

@@ -1,5 +1,3 @@
-.. _concept_hx4_bvn_w1c:
-
 Workflow options
 -------------------------
 
@@ -14,4 +12,4 @@ There are two workflows for registered users to set up, sync, and build Qualcomm
     * - Build public Qualcomm Yocto layers with standalone commands.
       - Build public Qualcomm Yocto layers with Dockerfile.
     * - .. centered:: :ref:`Build with standalone commands <build_from_source_github>`
-      - .. centered:: :ref:`Build with Dockerfile <build_private_distribution>`
+      - .. centered:: :ref:`Build with Dockerfile <build_with_dockerfile>`

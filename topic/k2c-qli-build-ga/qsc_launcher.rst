@@ -1,5 +1,3 @@
-.. _concept_n2t_tjn_w1c:
-
 Use QSC Launcher
 -----------------
 
@@ -11,7 +9,7 @@ Software download
 1. To open the QSC Launcher desktop application, launch **Qualcomm Software Center** from the **Applications** menu.
 
    .. note:: 
-      For the Launcher workflow to detect connected devices and flash software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host machine. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
+      For the Launcher workflow to detect connected devices and flash software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host computer. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
 
       .. image:: ../../media/k2c-qli-build-ga/QSC_has_PCAT_QUD_install_info.png
 
@@ -35,6 +33,8 @@ Software download
 
 2. Use your registered email ID to log in to the QSC desktop application. The QSC Launcher dashboard page (for example, when QCS6490 development kit is connected) appears as shown in the following image:
 
+   .. note:: To register, go to https://www.qualcomm.com/support/working-with-qualcomm.
+
    .. image:: ../../media/k2c-qli-build-ga/start_launcher_ab.png
 
    -  If you do not have a connected device, click **Start Launcher** (A) on the top panel.
@@ -42,7 +42,7 @@ Software download
 
 3. On the **Specify Environment** page, select the appropriate values for **Category**, **Chipset**, **Host Operating System**, and **Target Operating System**.
 
-   .. note:: See `chipsets (hardware SoCs) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-115/soc.html>`__ that are supported on Qualcomm Linux.
+   .. note:: See `chipsets (hardware SoCs) <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-115/soc.html>`__ that are supported on Qualcomm Linux.
 
    .. image:: ../../media/k2c-qli-build-ga/specify_env.png
 
@@ -59,11 +59,11 @@ Software download
       .. note::
          
          - For information on the supported distributions for your hardware SoCs, see the table *Access Controlled Distribution* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
-         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.        
+         - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.        
          - For information on the QIMP and QIRP SDKs, see the following guides:
 
-           - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51>`__
-           - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-265>`__
+           - `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__
+           - `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__
 
 5. Click **Download** to download the selected compilable distribution or flashable binary. After the software is downloaded successfully, a *Download complete* status appears.
 
@@ -89,7 +89,7 @@ Build and flash default configuration
 
    .. _launcher_compile_step:
 
-   a. After the download is complete, select **Compile** to start compiling. Depending on the size of the downloaded software and the host machine configuration, the compilation process may take a few hours.
+   a. After the download is complete, select **Compile** to start compiling. Depending on the size of the downloaded software and the host computer configuration, the compilation process may take a few hours.
 
       .. image:: ../../media/k2c-qli-build-ga/download.png
 
@@ -102,7 +102,11 @@ Build and flash default configuration
 
 2. Flash the software with the default configuration.
 
-   .. note:: Before you flash the software, ensure that the device is in Emergency Download (EDL) mode. For more information on how to force the device into EDL mode, see :ref:`Move to EDL mode <move_to_EDL>`.
+   .. note:: Before you flash the software, ensure the following:
+
+      1. Device is in :ref:`Emergency Download (EDL) mode <move_to_EDL>`.
+      #. :ref:`Provision UFS <ufs_provisioning>`.
+      #. :ref:`Flash CDT <flash_CDT>`.
 
    a. Flash the software by selecting the device on which you want to flash the compiled software. If multiple devices are connected, select the correct target device.
 
@@ -120,7 +124,7 @@ Build and flash default configuration
 
    e. Click **Done**.
 
-      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
+      .. note:: The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
 
    f. To establish UART and network connections, see :ref:`Connect to UART and network <connect_uart_network>`.
 

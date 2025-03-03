@@ -84,7 +84,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          reboot edl
 
-3. Verify if the device has entered the Qualcomm Download (QDL) mode by running the following command on the host machine:
+3. Verify if the device has entered the Qualcomm Download (QDL) mode by running the following command on the host computer:
 
    .. container:: nohighlight
       
@@ -107,18 +107,18 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 .. note:: Use ADB only if the device has a preloaded build.
 
 1. `Install
-   QUD <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#install-qud-on-linux-host>`__
+   QUD <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/additional_setup.html#install-qud-on-linux-host>`__
    on the host device.
 
 2. `Install
-   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#install-adb>`__
+   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/additional_setup.html#install-adb>`__
    on the host device.
 
 3. `Connect
-   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#connect-to-adb>`__
+   ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/additional_setup.html#connect-to-adb>`__
    to the device.
 
-4. Move the device to EDL mode by running the following command on the host machine:
+4. Move the device to EDL mode by running the following command on the host computer:
 
    .. container:: nohighlight
       
@@ -126,7 +126,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
          adb shell reboot edl
 
-5. Verify whether the device has entered the QDL mode by running the following command on the host machine:
+5. Verify whether the device has entered the QDL mode by running the following command on the host computer:
 
    .. container:: nohighlight
       
@@ -238,6 +238,14 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
 
    Download the latest version of the QDL tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
 
+   Run the following command to provide executable permission to QDL:
+
+   .. container:: nohighlight
+      
+      ::
+   
+         chmod -R 777 <qdl_download_path>
+
 #. Provision UFS:
 
    .. container:: nohighlight
@@ -248,7 +256,7 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
          <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage ufs prog_firehose_ddr.elf <Provision file>
          # Example, <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage ufs prog_firehose_ddr.elf provision_1_3.xml
 
-   .. note:: Use QDL binary based on the host machine architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
+   .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
 Flash CDT
 ----------
@@ -293,9 +301,7 @@ CDT provides platform/device-dependent data such as platform ID, subtype, versio
          cd <cdt_download_path>
          <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram3.xml patch3.xml
 
-   .. note:: Use QDL binary based on the host machine architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
-
-.. _section_byn_pdj_x1c:
+   .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
 Flash software using QDL
 ------------------------------------
@@ -334,7 +340,7 @@ Flash software using QDL
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
          <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
 
-   .. note:: Use QDL binary based on the host machine architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
+   .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
    Flashing is successful if you see *partition 1 is now bootable* on the terminal window as shown in the following message:
 
@@ -360,7 +366,7 @@ Flash software using QDL
          Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
          Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-   To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
+   To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
 
 .. note:: If flashing fails, perform the following steps and retry the flashing procedure:
 
@@ -375,7 +381,7 @@ Flash software using PCAT
 .. note:: This procedure is available for registered users only.
 
 1. :ref:`Install QSC CLI <one_time_host_setup>`.
-#. To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host machine. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
+#. To detect the connected devices and flash the software builds, ensure that the Qualcomm PCAT and QUD tools are installed on the host computer. Run the following commands to use ``qpm-cli`` to install PCAT and QUD:
 
    .. container:: nohighlight
       
@@ -467,7 +473,7 @@ Flash software using PCAT
          Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
          Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-   The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
+   The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
 
 .. _connect_uart_network:
 

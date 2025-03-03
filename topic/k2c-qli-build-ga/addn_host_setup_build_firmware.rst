@@ -1,9 +1,7 @@
-.. _host_setup_to_build_sdks:
-
 Ubuntu host setup
 -------------------------
 
-The Ubuntu host machine must be setup to ensure that the required software tools are installed and configured for use.
+The Ubuntu host computer must be setup to ensure that the required software tools are installed and configured for use.
 
 1. Install the following packages:
 
@@ -12,7 +10,7 @@ The Ubuntu host machine must be setup to ensure that the required software tools
       ::
 
          sudo apt update
-         sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail g++
+         sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail g++ libacl1
          sudo apt-get install lib32stdc++6 libncurses5 checkinstall libreadline-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev curl
 
 #. Add your Qualcomm login ID with PAT to the ``~/.netrc`` file in your home directory:

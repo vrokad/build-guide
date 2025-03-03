@@ -1,11 +1,7 @@
-.. _troubleshoot_howto_annex:
-
 Workspace view
 -----------------
 
-This section provides sample workspace structures with ``qsc-cli`` and GitHub workflow standalone use cases for the supported `hardware SoCs <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-115/soc.html>`__.
-
-.. _section_bsj_xhm_q1c_vinayjk_03-05-24-1606-7-713:
+This section provides sample workspace structures with ``qsc-cli`` and GitHub workflow standalone use cases for the supported `hardware SoCs <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-115/soc.html>`__.
 
 Workspace structure with qsc-cli
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -34,8 +30,6 @@ Workspace structure with qsc-cli
    with firmware and extras is shown in the following figure:
 
         .. image:: ../../media/k2c-qli-build-ga/ws_qsc_cli_4.png
-
-.. _section_ibb_xkc_t1c_vinayjk_03-15-24-054-26-366:
 
 Workspace structure with GitHub workflow standalone instructions
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -70,8 +64,6 @@ Workspace structure with GitHub workflow standalone instructions
   
    |ws_standalone_4|
 
-.. _section_pg4_nzt_vbc_vinayjk_06-25-24-1332-59-291:
-
 Images directory structure after successful build
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -101,7 +93,7 @@ Images directory structure after successful build
    |                             | information, see `Qualcomm Linux Yocto |
    |                             | Guide <ht                              |
    |                             | tps://docs.qualcomm.com/bundle/publicr |
-   |                             | esource/topics/80-70017-27/platform_so |
+   |                             | esource/topics/80-70018-27/platform_so |
    |                             | ftware_features.html#partitioning>`__. |
    +-----------------------------+----------------------------------------+
    | ``qdl``                     | Flashing tool binary                   |
@@ -114,10 +106,6 @@ Images directory structure after successful build
    | ``Image``                   | Linux kernel ARM64 boot executable     |
    |                             | image                                  |
    +-----------------------------+----------------------------------------+
-
-
-
-
 
 
 .. |ws_standalone_3| image:: ../../media/k2c-qli-build-ga/ws_standalone_3.png

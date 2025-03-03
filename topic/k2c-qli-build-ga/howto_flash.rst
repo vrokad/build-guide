@@ -1,5 +1,3 @@
-.. _howto_flash:
-
 Flash
 ------------
 
@@ -17,7 +15,7 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into mult
 **Prerequisites**
 
 * :ref:`Install QSC CLI <one_time_host_setup>`.
-* Install PCAT and QUD on the host machine using qpm-cli:
+* Install PCAT and QUD on the host computer using qpm-cli:
 
   .. container:: nohighlight
       

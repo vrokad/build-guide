@@ -4,7 +4,7 @@
 Troubleshoot
 ***************
 
-.. _section_hkm_2dc_p1c_vinayjk_02-29-24-1641-18-155:
+.. _troubleshoot_docker:
 
 Docker
 --------
@@ -115,8 +115,6 @@ Docker
          # You can run the following command to check if you are part of the Docker group
          id -a
          # This command returns an output string which should include 'docker'
-
-.. _section_w42_4gc_p1c_vinayjk_02-29-24-1706-59-554:
 
 Sync
 -------
@@ -293,7 +291,7 @@ Sync
          # Replace the following command
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linuxSTXkirkstone -m qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          # with
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m qcom-6.6.52-QLI.1.3-Ver.1.1.xml
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.52-QLI.1.3-Ver.1.1.xml
 
 -  **pull access denied for 032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool**
 
@@ -312,8 +310,6 @@ Sync
          rm -rf ~/.docker/config.json
 
    Rerun the ``qsc-cli`` command.
-
-.. _section_ays_4gc_p1c_vinayjk_02-29-24-1707-9-256:
 
 Build
 --------
@@ -523,7 +519,7 @@ Build
    **Solution**
 
    -  Remove the ``build-qcom-wayland`` directory.
-   -  Rerun the commands in :ref:`Build QIMP SDK image <section_lrb_1nd_fbc>`.
+   -  Rerun the commands in :ref:`Build QIMP SDK image <build_qimp_sdk_image_unreg>`.
 
 -  **failed: database disk image is malformed. abort()ing pseudo client by server request**
 
@@ -557,8 +553,6 @@ Build
 
          sudo su
          echo 1048576 > /proc/sys/fs/inotify/max_user_watches
-
-.. _section_uwl_lhc_p1c_vinayjk_02-29-24-1713-48-740:
 
 Flash
 -----------

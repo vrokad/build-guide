@@ -1,13 +1,11 @@
-.. _build_private_distribution:
+.. _build_with_dockerfile:
 
 Build with Dockerfile
 -------------------------
 
-.. _section_d5g_qcq_p1c_vinayjk_03-02-24-1449-27-555:
-
 Ubuntu host setup
 ^^^^^^^^^^^^^^^^^^^^^
-The Ubuntu host machine must be setup to ensure that the required software tools are installed and configured for use.
+The Ubuntu host computer must be setup to ensure that the required software tools are installed and configured for use.
 
 -  Install git:
 
@@ -40,12 +38,10 @@ The Ubuntu host machine must be setup to ensure that the required software tools
          # To check if user is part of a Docker group, run the following command:
          sudo grep /etc/group -e "docker"
 
-.. _section_anw_sv3_v1c_vinayjk_03-23-24-142-19-530:
-
-Check the host machine configuration
+Check the host computer configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
--  Check if your host machine is configured accurately:
+-  Check if your host computer is configured accurately:
 
    .. container:: nohighlight
       
@@ -67,7 +63,7 @@ Check the host machine configuration
 
    .. image:: ../../media/k2c-qli-build-ga/qcom-download-utils-folder.png
 
-.. _section_opk_sh4_w1c:
+.. _build_with_docker_bsp_image:
 
 Build BSP image
 ^^^^^^^^^^^^^^^^^^^^^
@@ -82,7 +78,7 @@ Create a Yocto Docker image and build:
    **Dockertag**: Use lowercase letters for the release folder followed by the Dockerfile OS version to identify the release build with the Dockerfile since Docker does not permit uppercase letters in the Dockertag.
 
    .. note:: 
-      To troubleshoot Docker issues, see :ref:`Troubleshoot Docker <section_hkm_2dc_p1c_vinayjk_02-29-24-1641-18-155>`.
+      To troubleshoot Docker issues, see :ref:`Troubleshoot Docker <troubleshoot_docker>`.
 
    .. container:: nohighlight
       
@@ -138,14 +134,12 @@ Create a Yocto Docker image and build:
      
      This error is triggered when your gitconfig does not set the UI color configuration as Git 1.8.4 is enabled by default. To enable color display in your account, run the following command: ``git config --global color.ui auto``.
 
-   - If a build error is triggered and fixed, run the commands in :ref:`Rebuild <section_p1h_tv3_v1c_vinayjk_03-23-24-142-26-643>`.
-
-.. _section_mp2_1n4_w1c:
+   - If a build error is triggered and fixed, run the commands in :ref:`Rebuild <build_with_docker_rebuild>`.
 
 Build QIMP SDK image
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
-1. :ref:`Build BSP image <section_opk_sh4_w1c>` using Docker.
+1. :ref:`Build BSP image <build_with_docker_bsp_image>` using Docker.
 #. Build QIMP SDK on top of the base image using Docker:
 
    a. Run the ``docker run`` command:
@@ -200,7 +194,7 @@ Build QIMP SDK image
             # Build SDK image
             bitbake qcom-qim-product-sdk
 
-.. _section_p1h_tv3_v1c_vinayjk_03-23-24-142-26-643:
+.. _build_with_docker_rebuild:
 
 Rebuild
 ^^^^^^^^^^^^^^
@@ -262,8 +256,6 @@ To rebuild after any modifications to the software release, use your existing wo
          bitbake qcom-multimedia-image
 
 .. note:: Exit from Docker before you flash the images.
-
-.. _section_x2k_vnf_w1c:
 
 Flash
 ^^^^^^^

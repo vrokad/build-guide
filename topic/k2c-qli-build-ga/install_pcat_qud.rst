@@ -1,9 +1,7 @@
-.. _concept_n2t_tjn_w1c:
-
 Install PCAT and QUD
 -------------------------
 
-For the Launcher workflow to detect the connected devices and flash the software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host machine. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
+For the Launcher workflow to detect the connected devices and flash the software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host computer. Click **PCAT** to install PCAT and **QUD** to install QUD as shown in the following image:
 
 .. image:: ../../media/k2c-qli-build-ga/QSC_has_PCAT_QUD_install_info.png
 

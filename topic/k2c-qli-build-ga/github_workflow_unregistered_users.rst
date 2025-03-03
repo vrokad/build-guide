@@ -2,7 +2,7 @@
 
 .. rst_class:: flattenforhtml
 
-GitHub workflow for unregistered users
+Build with GitHub for unregistered users
 =============================================
 
 The following sections explain how to use GitHub and make a build using the prebuilt proprietary binaries/images.

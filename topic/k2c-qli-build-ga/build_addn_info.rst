@@ -1,9 +1,9 @@
-.. _annexure_sync_build:
+.. _build_addn_info:
 
 .. rst_class:: flattenforhtml
 
-GitHub workflow (firmware and extras)
-=========================================
+Build with GitHub using firmware and extras
+============================================
 
 .. note:: This information is applicable only for authorized users. To upgrade your access, go to http://www.qualcomm.com/support/working-with-qualcomm.
 

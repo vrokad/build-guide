@@ -110,7 +110,7 @@ Connect to a UART shell
 
 Connect to ADB
 ^^^^^^^^^^^^^^^^
-See `Install and connect to ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#install-adb>`__.
+See `Install and connect to ADB <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/additional_setup.html#install-adb>`__.
 
 .. _connect_to_network:
 
@@ -262,9 +262,7 @@ Ensure that the :ref:`network connectivity <connect_to_network>` is established 
 .. note:: 
    
    - Ensure that the remote host is connected to the same Wi-Fi access point as the device.
-   - To create a non-root user account, see `Create a non-root user account <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/additional_setup.html#non-root-acc>`__.
-
-.. _section_j5g_rds_5bc_vinayjk_06-21-24-1739-53-921:
+   - To create a non-root user account, see `Create a non-root user account <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/additional_setup.html#non-root-acc>`__.
 
 Configure Ethernet with RJ45 port
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -272,7 +270,7 @@ Configure Ethernet with RJ45 port
 Ethernet/RJ45 port is enabled as a downstream port of PCIe to USB controller (``renesas``). Ensure that the ``renesas_usb_fw.mem`` file is available at the ``var/usbfw`` directory.
 
 .. note:: 
-   - If the ``renesas_usb_fw.mem`` firmware is not available at the ``var/usbfw`` directory, then :ref:`update USB and Ethernet controller firmware <section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149>`.
+   - If the ``renesas_usb_fw.mem`` firmware is not available at the ``var/usbfw`` directory, then :ref:`update USB and Ethernet controller firmware <update_usb_eth_controller>`.
 
 To check if the USB to ETH controller is enumerated, run the following command:
 
@@ -317,7 +315,7 @@ To check the Ethernet IP address, run the following command:
             collisions:0 txqueuelen:1000
             RX bytes:60711 (59.2 KiB)  TX bytes:18342 (17.9 KiB)
 
-.. _section_nsb_5gs_5bc_vinayjk_06-21-24-1803-34-149:
+.. _update_usb_eth_controller:
 
 Update USB and Ethernet controller firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -326,10 +324,10 @@ If you encounter USB or Ethernet connectivity issues on the RB3 Gen 2 device, co
 
 .. rubric:: Prerequisites
 
-- Ensure that the software is upgraded as described in `Update Software <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#ubuntu-up-sw>`__ before updating the Renesas firmware.
+- Ensure that the software is upgraded as described in `Update Software <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/set_up_the_device.html#ubuntu-up-sw>`__ before updating the Renesas firmware.
 - The device should be connected to the Linux host through the USB Type-C cable.
 
-.. note:: The following procedure is applicable only to Ubuntu 22.04 host. If you are using a Windows or macOS host, set up an Ubuntu virtual machine by following the instructions described in the `Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-41/getting-started.html>`__.
+.. note:: The following procedure is applicable only to Ubuntu 22.04 host. If you are using a Windows or macOS host, set up an Ubuntu virtual machine by following the instructions described in the `Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-41/getting-started.html>`__.
 
 1. Register and log in to `Renesas <https://www.renesas.com/>`__.
 

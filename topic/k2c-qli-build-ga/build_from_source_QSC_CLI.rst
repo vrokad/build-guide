@@ -1,4 +1,4 @@
-.. _qsc_cli_based_simple_yocto_layers_sync_build_and_flash:
+.. _build_from_source_qsc_cli:
 
 .. rst_class:: flattenforhtml
 

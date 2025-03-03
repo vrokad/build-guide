@@ -3,8 +3,6 @@
 Developer workflow
 --------------------------
 
-.. _section_ycs_nrf_s1c_vinayjk_03-11-24-2150-29-324:
-
 Sync and build with real-time Linux
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -13,13 +11,11 @@ Sync and build with real-time Linux
 `GitHub <https://github.com/quic-yocto/meta-qcom-realtime>`__ and it is
 built on top of the BSP build image. For more information on this layer,
 see
-`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#meta-qcom-realtime>`__
+`meta-qcom-realtime <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#meta-qcom-realtime>`__
 from the `Qualcomm Linux Yocto
-Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27>`__.
+Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27>`__.
 
-To sync and build real-time Linux, see :ref:`Build real-time Linux image <section_k51_23b_wbc_vinayjk_06-26-24-1344-54-418>`.
-
-.. _section_qct_b5g_s1c_vinayjk_03-12-24-127-51-384:
+To sync and build real-time Linux, see :ref:`Build real-time Linux image <build_real_time_linux_image_unreg>`.
 
 Migrate from the previous release to the next release
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -52,22 +48,16 @@ The migration process depends on the development, branching, and integration wor
 3. Build and validate your resulting workspace.
 4. Proceed with the next steps in your internal workflows.
 
-.. _section_rvz_b5g_s1c_vinayjk_03-12-24-127-55-935:
-
 Build a Qualcomm Linux kernel
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-See `building kernel image <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-3/yocto-kernel-support.html#build-kernel-image>`__.
-
-.. _section_lb1_c5g_s1c_vinayjk_03-12-24-127-56-85:
+See `building kernel image <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-3/yocto-kernel-support.html#build-kernel-image>`__.
 
 Customize Qualcomm Yocto layers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See `user
-customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/user_customizations.html>`__.
-
-.. _section_l2s_5qj_ybc_vinayjk_07-04-24-2052-5-755:
+customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/user_customizations.html>`__.
 
 Download layers for the QIMP SDK build using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -79,14 +69,12 @@ Download layers for the QIMP SDK build using the manifest release tag
    # cd to directory where you have 300 GB of free storage space to create your workspaces
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
-   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
    # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_qim-product-sdk-1.1.2.xml
    repo sync
 
 .. note:: 
-   For the steps to set up environment and build software images, see :ref:`Build QIMP SDK image <section_lrb_1nd_fbc>`.
-
-.. _section_bgr_hfk_ybc_vinayjk_07-04-24-2242-31-273:
+   For the steps to set up environment and build software images, see :ref:`Build QIMP SDK image <build_qimp_sdk_image_unreg>`.
 
 Download layers for the QIRP SDK build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -98,14 +86,12 @@ Download layers for the QIRP SDK build by using the manifest release tag
    # cd to directory where you have 300 GB of free storage space to create your workspaces
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
-   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
    # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_robotics-product-sdk-1.1.xml
    repo sync
 
 .. note:: 
-   For the steps to set up the environment and build software images, see :ref:`Build QIRP SDK image <section_gv3_czl_qbc_vinayjk_06-06-24-1402-32-392>`.
-
-.. _section_jpw_mfk_ybc_vinayjk_07-04-24-2244-2-775:
+   For the steps to set up the environment and build software images, see :ref:`Build QIRP SDK image <build_qirp_sdk_image_unreg>`.
 
 Download layers for the real-time Linux build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,14 +103,12 @@ Download layers for the real-time Linux build by using the manifest release tag
    # cd to directory where you have 300 GB of free storage space to create your workspaces
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
-   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
    # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1_realtime-linux-1.0.xml
    repo sync
 
 .. note:: 
-   For the steps to set up the environment and build software images, see :ref:`Build real-time Linux image <section_k51_23b_wbc_vinayjk_06-26-24-1344-54-418>`.
-
-.. _section_xxm_fk3_v1c_vinayjk_03-23-24-014-37-829:
+   For the steps to set up the environment and build software images, see :ref:`Build real-time Linux image <build_real_time_linux_image_unreg>`.
 
 Build a meta-qcom-qim-product-sdk layer as an add-on layer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

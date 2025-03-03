@@ -1,5 +1,3 @@
-.. _sync_build_flash:
-
 Use QSC CLI
 --------------
 
@@ -22,9 +20,7 @@ Software download
    .. note::
       - If you are downloading more than one distribution, create a new workspace for each distribution that you download.
       - For the Product_ID, Distribution, and Release_ID values, see the table *QSC-CLI Input Parameters* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
-      - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
-
-.. _section_yhy_11w_q1c_vinayjk_03-07-24-006-28-270:
+      - For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 Build default configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -37,7 +33,7 @@ Compile
 
 Start the compilation process after the download is complete:
 
-.. note:: Depending on the size of the software and the host machine configuration, the compilation process may take a few hours.
+.. note:: Depending on the size of the software and the host computer configuration, the compilation process may take a few hours.
 
 .. container:: nohighlight
    
@@ -50,8 +46,6 @@ Start the compilation process after the download is complete:
 This process builds the necessary Qualcomm firmware and completes the Qualcomm Linux build.
 
 .. note:: If you encounter a BitBake fetcher error, try recompiling to resolve the issue. If the issue persists, see :ref:`BitBake Fetcher Error <do_fetch_error_1>` for a solution.
-
-.. _section_qb2_sp1_q1c_vinayjk_03-04-24-129-15-322:
 
 Recompile
 '''''''''''
@@ -68,12 +62,10 @@ To recompile after any modifications to the software release, use your existing 
 
 .. note:: For information on software image names (``--image``), see the table *QSC-CLI Input Parameters* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
 
-.. _section_x2k_vnf_w1c:
-
 Flash
 '''''''''
 
-.. note:: For the QSC CLI to detect the connected devices and flash the software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host machine. Use the ``qpm-cli`` command to install PCAT and QUD:
+.. note:: For the QSC CLI to detect the connected devices and flash the software builds, ensure that the Qualcomm Product Configuration Assistant Tool (PCAT) and Qualcomm USB Driver (QUD) are installed on the host computer. Use the ``qpm-cli`` command to install PCAT and QUD:
 
    .. container:: nohighlight
       
@@ -88,7 +80,11 @@ The ``qpm-cli --help`` command lists the help options.
 
 For Ubuntu 22.04, you may encounter an issue while installing QUD, where you might be asked to enroll the public key on your Linux host for a successful QUD installation. For more information, see the ``signReadme.txt`` file in the ``/opt/QTI/sign/`` directory.
 
-.. note:: Before you flash the software, ensure that the device is in Emergency Download (EDL) mode. For more information on how to force the device into EDL mode, see :ref:`Move to EDL mode <move_to_EDL>`.
+.. note:: Before you flash the software, ensure the following:
+
+   1. Device is in :ref:`Emergency Download (EDL) mode <move_to_EDL>`.
+   #. :ref:`Provision UFS <ufs_provisioning>`.
+   #. :ref:`Flash CDT <flash_CDT>`.
   
 1. Flash a device.
 
@@ -100,7 +96,7 @@ For Ubuntu 22.04, you may encounter an issue while installing QUD, where you mig
          
          # Example, qsc-cli flash --workspace-path '/local/mnt/workspace/sample_workspace' --serialnumber 'be116704'
       
-   The ``--buildflavor`` argument is optional and only required for devices that have multiple flavors. To list the build flavors, run the following command on the host machine:
+   The ``--buildflavor`` argument is optional and only required for devices that have multiple flavors. To list the build flavors, run the following command on the host computer:
       
    .. container:: nohighlight
       
@@ -109,7 +105,7 @@ For Ubuntu 22.04, you may encounter an issue while installing QUD, where you mig
          qsc-cli flash --workspace-path <workspace path> --list-buildflavor
 
    .. note::
-      - To find the `<serial number>`, run the following command on the host machine:
+      - To find the `<serial number>`, run the following command on the host computer:
 
         .. container:: nohighlight
          
@@ -125,7 +121,7 @@ For Ubuntu 22.04, you may encounter an issue while installing QUD, where you mig
            ID | DEVICE TYPE | DEVICE STATE | SERIAL NUMBER | ADB SERIAL NUMBER | DESCRIPTION
            NA | NA          | EDL          | BE116704      | be116704          | Qualcomm USB Composite Device:QUSB_BULK_CID:042F_SN:BE116704
 
-      - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
+      - The device reboots after the flashing procedure is completed successfully. To verify the updated software version, see `Check Qualcomm Linux version <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/set_up_the_device.html#check-qualcomm-linux-version>`__.
 
 2. To establish UART and network connections, see :ref:`Connect to UART and network <connect_uart_network>`.
 

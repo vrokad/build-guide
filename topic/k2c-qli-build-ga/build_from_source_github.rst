@@ -8,7 +8,7 @@ Build with standalone commands
 Ubuntu host setup
 ^^^^^^^^^^^^^^^^^^^^^
 
-The Ubuntu host machine must be setup to ensure that the required software tools are installed and configured for use.
+The Ubuntu host computer must be setup to ensure that the required software tools are installed and configured for use.
 
 1. Install the following packages to prepare your host environment for
    Yocto build:
@@ -18,7 +18,7 @@ The Ubuntu host machine must be setup to ensure that the required software tools
       ::
 
          sudo apt update
-         sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail g++
+         sudo apt install repo gawk wget git diffstat unzip texinfo gcc build-essential chrpath socat cpio python3 python3-pip python3-pexpect xz-utils debianutils iputils-ping python3-git python3-jinja2 libegl1-mesa libsdl1.2-dev pylint xterm python3-subunit mesa-common-dev zstd liblz4-tool locales tar python-is-python3 file libxml-opml-simplegen-perl vim whiptail g++ libacl1
 
 #. Add your Qualcomm login ID with Personalized Access Token (PAT) to the ``~/.netrc`` file in your home directory:
 
@@ -97,8 +97,6 @@ The Ubuntu host machine must be setup to ensure that the required software tools
          git config --global http.https://chipmaster2.qti.qualcomm.com.followRedirects true
          git config --global http.https://qpm-git.qualcomm.com.followRedirects true
 
-.. _section_y32_1zy_v1c:
-
 Sync
 ^^^^^^^
 
@@ -155,17 +153,15 @@ The following table shows an example mapping of the Yocto layers to the manifest
 
 .. note::
    
-   - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+   - For information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
    
-   - For information on building the ``meta-qcom-extras`` add-on layer and select firmware sources, see :doc:`GitHub workflow (firmware and extras) <build_addn_info>`.
-
-.. _section_sk2_xk2_fbc:
+   - For information on building the ``meta-qcom-extras`` add-on layer and select firmware sources, see :doc:`Build with GitHub using firmware and extras <build_addn_info>`.
 
 Build BSP image
 ^^^^^^^^^^^^^^^^^^^^^
 BSP image build contains software components for Qualcomm device support and value-added software features applicable to Qualcomm SoCs. It includes a reference distribution configuration for Qualcomm development kits.
 
-For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 1. Download Qualcomm Yocto and the supporting layers:
 
@@ -176,7 +172,7 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
 
@@ -199,7 +195,7 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 #. Build the software image:
 
    .. note:: 
-      For supported image recipes, see :ref:`Image recipes supported in the GitHub workflow <section_x3c_n5l_zbc_vinayjk_07-08-24-1744-58-455>`.
+      For supported image recipes, see :ref:`Image recipes supported in the GitHub workflow <image_recipes_github_workflow>`.
 
    .. container:: nohighlight
       
@@ -217,13 +213,11 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
          ls -al system.img
 
-.. _section_lrb_1nd_fbc:
-
 Build QIMP SDK image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The QIMP SDK is a collection of four standalone function SDKs, namely, IM SDK, Qualcomm® Neural Processing SDK, Qualcomm® AI Engine direct SDK, and the Lite Runtime (LiteRT). It also includes reference applications that you can use to develop use cases. 
 
-For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51>`__.
+For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__.
 
 1. Download Qualcomm Yocto and the supporting layers:
 
@@ -236,7 +230,7 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
 
@@ -291,13 +285,11 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
          ls -al system.img
 
-.. _section_gv3_czl_qbc_vinayjk_06-06-24-1402-32-392:
-
 Build QIRP SDK image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The Qualcomm® Intelligent Robotics Product (QIRP) SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm Linux releases.
 
-For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-265>`__.
+For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__.
 
 1. Download Qualcomm Yocto and the supporting layers:
 
@@ -311,7 +303,7 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
 
@@ -363,13 +355,11 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          # system.img is present in the following path
          Robotics image: <WORKSPACE DIR>/build-qcom-robotics-ros2-humble/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image
 
-.. _section_k51_23b_wbc_vinayjk_06-26-24-1344-54-418:
-
 Build real-time Linux image
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The real-time layer provides recipes and configurations required to run the Qualcomm Linux kernel as a real-time kernel. The real-time kernel runs with preemption fully enabled through a configuration, ``CONFIG_PREEMPT_RT=y``. This layer supports ``linux-kernel-qcom-rt`` recipe that fetches and builds the Qualcomm Linux kernel for the supported machine. This layer appends to kernel and the upstream ``PREEMPT_RT`` patches, based on the kernel version and enables real-time configurations.
 
-For more details, see `Real-time kernel <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-3/features.html#real-time-rt-kernel-overview>`__.
+For more details, see `Real-time kernel <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-3/features.html#real-time-rt-kernel-overview>`__.
 
 1. Download Qualcomm Yocto and the supporting layers:
 
@@ -382,7 +372,7 @@ For more details, see `Real-time kernel <https://docs.qualcomm.com/bundle/public
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
 
@@ -434,8 +424,6 @@ For more details, see `Real-time kernel <https://docs.qualcomm.com/bundle/public
 
          cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
          ls -al system.img
-
-.. _section_x2k_vnf_w1c:
 
 Flash
 ^^^^^^^

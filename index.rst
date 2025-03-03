@@ -10,9 +10,10 @@ Qualcomm Linux Build Guide
 .. toctree::
    :titlesonly:
 
+   topic/k2c-qli-build-ga/build_landing_page
    topic/k2c-qli-build-ga/introduction
    topic/k2c-qli-build-ga/build_from_source_qsc_gui_intro
-   topic/k2c-qli-build-ga/build_from_source_QSC_CLI
+   topic/k2c-qli-build-ga/build_from_source_qsc_cli
    topic/k2c-qli-build-ga/github_workflow_unregistered_users
    topic/k2c-qli-build-ga/build_from_source_github_intro
    topic/k2c-qli-build-ga/build_addn_info  

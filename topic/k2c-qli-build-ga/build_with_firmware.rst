@@ -1,9 +1,5 @@
-.. _build_private_distribution_with_extras:
-
 Build with firmware sources
 ------------------------------------
-
-.. _section_q4d_4gq_p1c_vinayjk_03-02-24-1519-18-136:
 
 Sync firmware
 ^^^^^^^^^^^^^^
@@ -154,7 +150,7 @@ The following tables describe the firmware distributions that can be downloaded 
 
        ``meta-qcom-qim-product-sdk``
 
-.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+.. note:: For more information on the Yocto layers, see `Qualcomm Linux metadata layers and descriptions <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 .. _Mapping_firmware_table:
 
@@ -213,8 +209,6 @@ The following ``git clone`` command downloads the selected firmware components i
 .. note:: 
    - The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` directory.
    - For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
-
-.. _section_v5m_4gq_p1c_vinayjk_03-02-24-1519-24-381:
 
 Build firmware
 ^^^^^^^^^^^^^^^^^^^^^
@@ -292,7 +286,7 @@ Build firmware
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <section_nqg_cj3_v1c_vinayjk_03-23-24-006-3-877>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build cDSP 
 
@@ -610,7 +604,7 @@ Build firmware
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <section_nqg_cj3_v1c_vinayjk_03-23-24-006-3-877>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build DSP      
 
@@ -903,7 +897,7 @@ Build firmware
                   export HEXAGON_ROOT=$HOME/Qualcomm/HEXAGON_Tools
                   echo $HEXAGON_ROOT
 
-            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <section_nqg_cj3_v1c_vinayjk_03-23-24-006-3-877>`.
+            .. note:: Set the environment variable HEXAGON_ROOT to the path where the Hexagon SDK is installed. To change the install path when using ``qpm-cli``, see :ref:`Change the Hexagon tool install path <change_hex_tool_install_path>`.
 
          .. rubric:: Build DSP      
 
@@ -1124,13 +1118,11 @@ Build firmware
             -  ``QCS8300_dspso.zip``
             -  ``QCS8300_fw.zip``
 
-.. _section_unn_4gq_p1c_vinayjk_03-02-24-1519-24-874:
-
 Build BSP image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 BSP image build contains the software components for Qualcomm device support and value-added software features applicable to Qualcomm SoCs. It includes a reference distribution configuration for Qualcomm development kits. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
-For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
+For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27/platform_software_features.html#qualcomm-linux-metadata-layers-overview>`__.
 
 1. Download Qualcomm Yocto and the supporting layers with extras:
 
@@ -1141,7 +1133,7 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
@@ -1222,13 +1214,11 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
 
 #. Flash the generated build using :doc:`Flash software images <flash_images>`.
 
-.. _section_cx2_dqf_s1c_vinayjk_03-11-24-2139-47-648:
-
 Build QIMP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The QIMP SDK is a collection of four standalone function SDKs, namely, IM SDK, Qualcomm® Neural Processing SDK, Qualcomm® AI Engine direct SDK, and the LiteRT. It also includes reference applications that you can use to develop use cases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise present as binary.
 
-For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51>`__.
+For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51>`__.
 
 1. Download the QIMP SDK layers, Qualcomm Yocto layer, and the supporting layers with
    extras:
@@ -1240,7 +1230,7 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
@@ -1328,13 +1318,11 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
 
 #. Flash the generated build using :doc:`Flash software images <flash_images>`.
 
-.. _section_kjz_d1j_5bc_vinayjk_06-20-24-1130-57-104:
-
 Build QIRP SDK image with extras
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The QIRP SDK 2.0 is a collection of components that enable you to develop robotic features on Qualcomm Linux releases. The ``meta-qcom-extras`` layer enables source compilation of select components, which are otherwise available as binaries.
 
-For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-265>`__.
+For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265>`__.
 
 .. note:: Before you begin, clone the respective firmware for QIRP SDK, for example, ``qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk``.
 
@@ -1348,7 +1336,7 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          # cd to directory where you have 300 GB of free storage space to create your workspaces
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-kirkstone -m <manifest release tag>
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
          # Example, <manifest release tag> is qcom-6.6.52-QLI.1.3-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1

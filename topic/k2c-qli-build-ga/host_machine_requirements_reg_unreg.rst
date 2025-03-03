@@ -25,9 +25,9 @@ Host machine requirements
      - Python 3.10.2 or later versions      
 
    * - 16 GB RAM
-     - GCC 7.5 or later versions      
+     - GCC 8.0 or later versions
 
    * - Ubuntu 22.04
      - GNU Make 4.0 or later versions      
 
-.. note:: To set up a virtual machine (VM) running Ubuntu 22.04 on Microsoft Windows or Apple\ :sup:`®` macOS\ :sup:`®`, see `Qualcomm Linux Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-41/>`__. Code compilation on a VM is a slow process and may take a few hours. Qualcomm recommends using an Ubuntu host machine for compilation.
+.. note:: To set up a virtual machine (VM) running Ubuntu 22.04 on Microsoft Windows or Apple\ :sup:`®` macOS\ :sup:`®`, see `Qualcomm Linux Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-41/>`__. Code compilation on a VM is a slow process and may take a few hours. Qualcomm recommends using an Ubuntu host computer for compilation.

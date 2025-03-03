@@ -3,8 +3,6 @@
 Build
 -------
 
-.. _section_gcp_5hh_q1c_vinayjk_03-04-24-2335-11-750:
-
 Check if the build is complete
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -17,7 +15,7 @@ If your build instruction is ``bitbake qcom-multimedia-image``, check if the ``s
       cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
       ls -al system.img
 
-.. _section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265:
+.. _how_to_build_generate_sdk:
 
 Generate an eSDK
 ^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -162,8 +160,6 @@ Set up the environment and generate eSDK:
 
 Rebuild the image and generate the eSDK again.
 
-.. _section_hjt_vhh_q1c_vinayjk_03-04-24-2335-32-213:
-
 Rebuild using a Docker environment
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -178,7 +174,7 @@ Run the commands to connect to Docker for your environment setup and then use th
       # Make code changes
 
 .. note:: 
-   Get to a Docker shell as mentioned in :ref:`Generate an eSDK <section_bcj_vhh_q1c_vinayjk_03-04-24-2335-25-265>`.
+   Get to a Docker shell as mentioned in :ref:`Generate an eSDK <how_to_build_generate_sdk>`.
 
 -  Rebuild using your source changes:
 
@@ -202,8 +198,6 @@ Run the commands to connect to Docker for your environment setup and then use th
          MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
          # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
          bitbake qcom-multimedia-test-image
-
-.. _how_to_build_qdl_standalone:
 
 Build a standalone QDL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -239,7 +233,7 @@ Build a standalone QDL
 
          ./qdl --storage ufs --include <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/prog_firehose_ddr.elf <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/rawprogram*.xml <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/patch*.xml
 
-.. _section_nqg_cj3_v1c_vinayjk_03-23-24-006-3-877:
+.. _change_hex_tool_install_path:
 
 Change the Hexagon tool install path
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -260,7 +254,7 @@ Provide an absolute path for ``<TOOLS_DIR>`` in ``qpm-cli`` and export commands 
       qpm-cli --extract hexagon8.4 --version 8.4.07 --path <TOOLS_DIR>/8.4.07
       export HEXAGON_ROOT=<TOOLS_DIR>
 
-.. _section_x3c_n5l_zbc_vinayjk_07-08-24-1744-58-455:
+.. _image_recipes_github_workflow:
 
 Image recipes supported in the GitHub workflow
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -285,14 +279,14 @@ Image recipes supported in the GitHub workflow
 |                                    | tests                                    |
 +------------------------------------+------------------------------------------+
 
-.. _section_imr_xc4_1cc_vinayjk_07-12-24-1513-38-780:
+.. _download_platform_esdk:
 
 Download the Platform eSDK
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1. Check the :ref:`host machine requirements <host_machine_req_github_workflow_unregistered_users>`.
+1. Check the :ref:`host computer requirements <host_machine_req_github_workflow_unregistered_users>`.
 
-2. Set up the :ref:`Ubuntu host <section_twd_1bv_xbc_vinayjk_07-02-24-2039-30-667>`.
+2. Set up the :ref:`Ubuntu host <ubuntu_host_setup_github_unreg>`.
 
 3. Download the Platform eSDK:
 
@@ -314,7 +308,7 @@ Download the Platform eSDK
 
    #. Download the zipped file:
 
-      -  For an Ubuntu x86 architecture-based host machine:
+      -  For an Ubuntu x86 architecture-based host computer:
 
          .. container:: nohighlight
       
@@ -322,7 +316,7 @@ Download the Platform eSDK
 
                wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/x86/qcom-6.6.52-QLI.1.3-Ver.1.1_qim-product-sdk-1.1.2.zip
 
-      -  For an Arm architecture-based host machine:
+      -  For an Arm architecture-based host computer:
 
          .. container:: nohighlight
       
@@ -363,7 +357,7 @@ Download the Platform eSDK
 
          sh ./qcom-wayland-x86_64-qcom-multimedia-image-armv8-2a-qcm6490-toolchain-ext-1.0.sh
 
-5. Follow the instructions on the console to install the eSDK in a convenient location on your host machine.
+5. Follow the instructions on the console to install the eSDK in a convenient location on your host computer.
 
 6. Ensure that the eSDK installation is successful.
 
@@ -371,7 +365,7 @@ Download the Platform eSDK
 
    |imageLayerWorkspace|
 
-   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedures <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51/advanced-procedure.html>`__.
+   .. note:: Advanced developers can still build their own eSDK by following the steps mentioned in `Advanced procedures <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51/advanced-procedure.html>`__.
 
 7. Run the following command to set the ``ESDK_ROOT`` variable:
 
@@ -390,7 +384,7 @@ Download the Platform eSDK
          export ESDK_ROOT=/local/mnt/workspace/Platform_eSDK_plus_QIM
 
 The QIMP SDK installation is now complete. To develop an application for
-the device, see `Develop your first application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70017-51/content-develop-your-first-application.html>`__.
+the device, see `Develop your first application <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-51/content-develop-your-first-application.html>`__.
 
 
 

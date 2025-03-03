@@ -1,19 +1,18 @@
-.. _concept_rr1_5dn_w1c:
-
 Install QSC using a GUI
 -----------------------------
 
-1. Use your registered email ID to log in to https://softwarecenter.qualcomm.com, then click **Download Software Center**.
+1. Download the latest `Qualcomm Software Center <https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Software_Center>`__, and then click **Download**.
 
-   .. image:: ../../media/k2c-qli-build-ga/gui.png
+   .. image:: ../../media/k2c-qli-build-ga/QSC_download.png
 
 
    The QSC Debian package (``.deb``) is downloaded to your machine.
 
-2. To install the QSC Debian package using the Ubuntu GNOME GUI, ensure that GDebi is installed first. Run the following command on your Linux host machine to install GDebi:
+2. To install the QSC Debian package using the Ubuntu GNOME GUI, ensure that GDebi is installed first. Run the following command on your Linux host computer to install GDebi:
 
    ::
 
+      sudo apt update
       sudo apt install gdebi
 
 3. Right-click on the downloaded QSC Debian file and click **Open With GDebi Package Installer**.
@@ -47,4 +46,3 @@ Install QSC using a GUI
 8. To find the Qualcomm Software Center, click **Show Applications**.
 
    .. image:: ../../media/k2c-qli-build-ga/show_apps.png
-

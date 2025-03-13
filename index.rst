@@ -7,12 +7,12 @@
 Qualcomm Linux Build Guide
 ############################
 
-.. .. only:: html
+.. only:: html
 
    .. toctree::
-..      :titlesonly:
+      :titlesonly:
 
-..      topic/k2c-qli-build-ga/build_landing_page
+      topic/k2c-qli-build-ga/build_landing_page
 
 .. only:: latex
 

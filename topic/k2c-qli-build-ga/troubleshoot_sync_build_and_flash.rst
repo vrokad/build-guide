@@ -275,7 +275,7 @@ Sync
    Work with your IT administrator for any further changes to your home
    directory.
 
--  **fatal: couldn’t find remote ref refs/heads/qcom-linuxSTXkirkstone**
+-  **fatal: couldn’t find remote ref refs/heads/qcom-linuxSTXscarthgap**
 
    If you see any junk characters while copying commands from the PDF,
    remove or replace the junk characters with appropriate symbols and
@@ -289,7 +289,7 @@ Sync
       ::
 
          # Replace the following command
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linuxSTXkirkstone -m qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linuxSTXscarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.0.xml
          # with
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.0.xml
 

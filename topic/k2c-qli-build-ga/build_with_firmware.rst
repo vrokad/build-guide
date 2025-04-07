@@ -20,11 +20,11 @@ The following table describes the Qualcomm Yocto layers and release tags:
    * - :rspan:`2` Public developers (unregistered)
      - ``meta-qcom-hwe``
      - manifest release tag
-     - qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+     - qcom-6.6.65-QLI.1.4-Ver.1.1.xml
    *  
      - ``meta-qcom-qim-product-sdk``
      - manifest release tag
-     - qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1.xml
+     - qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2.xml
    *  
      - ``meta-qcom-robotics-sdk``
      - manifest release tag
@@ -32,11 +32,11 @@ The following table describes the Qualcomm Yocto layers and release tags:
    * - Licensed developers with authorized access
      - ``meta-qcom-extras``
      - meta-qcom-extras release tag
-     - r1.0_00070.0 
+     - r1.0_00077.0 
    * - See :ref:`Mapping access levels to firmware distributions <build_mapping_access_levels>`
      - NA
      - firmware release tag
-     - r1.0_00068.0
+     - r1.0_00075.0
 
 The following tables describe the firmware distributions you can download according to the need and entitlements:
 
@@ -204,11 +204,11 @@ The following ``git clone`` command downloads the selected firmware components i
       mkdir -p <FIRMWARE_ROOT>
       cd <FIRMWARE_ROOT>
       git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk.git
-      # Example, <firmware release tag> is r1.0_00068.0
+      # Example, <firmware release tag> is r1.0_00075.0
 
 .. note:: 
    - The ``git clone`` command clones the content into the ``<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` directory.
-   - For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+   - For the latest ``<firmware release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 Build firmware
 ^^^^^^^^^^^^^^^^^^^^^
@@ -1137,15 +1137,15 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
-         # Example, <meta-qcom-extras release tag> is r1.0_00070.0
+         # Example, <meta-qcom-extras release tag> is r1.0_00077.0
          mkdir -p layers/meta-qcom-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
-   .. note:: For the ``<manifest release tag>`` and ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+   .. note:: For the ``<manifest release tag>`` and ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 #. Set up the Yocto build:
 
@@ -1157,13 +1157,14 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          export EXTRALAYERS="meta-qcom-extras"
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
-         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
-         # To find <CUST_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
-         # Use the number specified to export <CUST_ID>.
-         export CUST_ID="213195"
+         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.         
+         # CUST_ID must be set to "213195" for no-modem based distributions ("qualcomm-linux-spf-1-0_ap_standard_oem_nomodem",
+         # "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk", "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk").         
+         # For other modem based distributions, CUST_ID must be set based on the "Customer ID".
+         # To find "Customer ID", sign in to your account at qualcomm.com.
+         # Click the Profile icon, select Account Settings, and then scroll down to the Company Information section.
+         # export CUST_ID using the following command.
+         export CUST_ID=<Customer ID>
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
@@ -1171,7 +1172,7 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip. 
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
 #. Set up the build environment:
 
@@ -1184,7 +1185,7 @@ For more details, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com
          # source setup-environment: Sets the environment, creates the build directory build-qcom-wayland,
          # and enters into build-qcom-wayland directory.
 
-   .. note:: To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+   .. note:: To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 #. Compile the Yocto build:
 
@@ -1232,16 +1233,16 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
          # Example, <meta-qcom-extras release tag> is r1.0_0005.0
          mkdir -p layers/meta-qcom-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
-         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1 layers/meta-qcom-qim-product-sdk
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
+         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2 layers/meta-qcom-qim-product-sdk
 
-   .. note:: For the ``<manifest release tag>`` and ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+   .. note:: For the ``<manifest release tag>`` and ``<meta-qcom-extras release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 #. Set up the Yocto build:
 
@@ -1253,13 +1254,14 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          export EXTRALAYERS="meta-qcom-extras meta-qcom-qim-product-sdk"
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
-         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
-         # To find <CUST_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
-         # Use the number specified to export <CUST_ID>.
-         export CUST_ID="213195"
+         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.         
+         # CUST_ID must be set to "213195" for no-modem based distributions ("qualcomm-linux-spf-1-0_ap_standard_oem_nomodem",
+         # "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk", "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk").         
+         # For other modem based distributions, CUST_ID must be set based on the "Customer ID".
+         # To find "Customer ID", sign in to your account at qualcomm.com.
+         # Click the Profile icon, select Account Settings, and then scroll down to the Company Information section.
+         # export CUST_ID using the following command.
+         export CUST_ID=<Customer ID>
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
@@ -1267,7 +1269,7 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip.
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/<product>/common/build/ufs/bin"
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
 #. Set up the build environment:
 
@@ -1281,7 +1283,7 @@ For more details, see `QIMP SDK Quick Start Guide <https://docs.qualcomm.com/bun
          # and enters into build-qcom-wayland directory.
 
    .. note::
-      To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+      To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 #. Compile the QIMP SDK build:
 
@@ -1336,22 +1338,22 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          mkdir <WORKSPACE_DIR>
          cd <WORKSPACE_DIR>
          repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         # Example, <manifest release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1.xml
          repo sync
          git clone https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_hlos_oem_metadata.git -b <meta-qcom-extras release tag> --depth 1
-         # Example, <meta-qcom-extras release tag> is r1.0_00070.0
+         # Example, <meta-qcom-extras release tag> is r1.0_00077.0
          mkdir -p layers/meta-qcom-extras
          mkdir -p layers/meta-qcom-robotics-extras
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-extras/* layers/meta-qcom-extras/
          cp -rf qualcomm-linux-spf-1-0_hlos_oem_metadata/<product>/common/config/meta-qcom-robotics-extras/* layers/meta-qcom-robotics-extras/
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
          git clone https://github.com/ros/meta-ros -b scarthgap layers/meta-ros && cd layers/meta-ros && git checkout c560699e810e60a9526f4226c2c23f8d877280c8 && cd ../../
          git clone https://github.com/quic-yocto/meta-qcom-robotics.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics
          git clone https://github.com/quic-yocto/meta-qcom-robotics-distro.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-distro
          git clone https://github.com/quic-yocto/meta-qcom-robotics-sdk.git -b qcom-6.6.65-QLI.1.4-Ver.1.0_robotics-product-sdk-1.0 layers/meta-qcom-robotics-sdk
-         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1 layers/meta-qcom-qim-product-sdk
-         # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1
+         git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2 layers/meta-qcom-qim-product-sdk
+         # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2
 
    .. note:: 
        For the ``<manifest release tag>``, ``<meta-qcom-extras release tag>``, and ``<meta-qcom-qim-product-sdk release tag>`` information, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-240626095531/>`__.
@@ -1366,13 +1368,14 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          export EXTRALAYERS="meta-qcom-extras meta-qcom-robotics-extras"
 
          # CUST_ID is used to clone the proprietary source repositories downloaded by meta-qcom-extras.
-         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.
-         # This ID is constant for the firmware repository for example "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk.git".
-         # CUST_ID must be initialized  for "Licensed developers (contact Qualcomm for access)".
-         # To find <CUST_ID>, log in to your account at qualcomm.com.
-         # Click the profile icon, select Account Settings, and then scroll down to the Company Information section for Customer ID.
-         # Use the number specified to export <CUST_ID>.
-         export CUST_ID="213195"
+         # It allows source compilation for the corresponding binaries present in meta-qcom-hwe.         
+         # CUST_ID must be set to "213195" for no-modem based distributions ("qualcomm-linux-spf-1-0_ap_standard_oem_nomodem",
+         # "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk", "qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk").         
+         # For other modem based distributions, CUST_ID must be set based on the "Customer ID".
+         # To find "Customer ID", sign in to your account at qualcomm.com.
+         # Click the Profile icon, select Account Settings, and then scroll down to the Company Information section.
+         # export CUST_ID using the following command.
+         export CUST_ID=<Customer ID>
 
          # The firmware recipe is compiled when the Yocto build is initiated. Firmware recipe expects the
          # path of firmware. You have generated firmware prebuilts (boot-critical and split-firmware binaries)
@@ -1380,7 +1383,7 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          # Example, for QCM6490, the directory path must contain QCM6490_bootbinaries.zip, QCM6490_dspso.zip, and QCM6490_fw.zip.
          # Set the environment variable to pick up the prebuilts:
          export FWZIP_PATH="<FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qirpsdk/<product>/common/build/ufs/bin"
-         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/).
+         # An example <product> is QCM6490.LE.1.0. For more information on <product>, see the latest Release Notes (https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/).
 
 #. Compile the QIRP SDK build:
 
@@ -1397,7 +1400,7 @@ For more details, see `QIRP SDK 2.0 User Guide <https://docs.qualcomm.com/bundle
          ../qirp-build qcom-robotics-full-image
 
    .. note::
-      To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+      To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
    After a successful build, check that the QIRP SDK build artifacts are at the following paths:
 

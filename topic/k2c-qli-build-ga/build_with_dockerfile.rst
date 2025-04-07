@@ -73,7 +73,7 @@ Create a Yocto Docker image and build:
 
 1. Run ``docker_build.sh`` to create the Docker image with Dockerfile
    (**Dockerfile_22.04**) and Dockertag
-   (**qcom-6.6.65-qli.1.4-ver.1.0_22.04**). Use this Docker image to
+   (**qcom-6.6.65-qli.1.4-ver.1.1_22.04**). Use this Docker image to
    create the container environment and run the Yocto build.
 
    **Dockertag**: Use lowercase letters for the release folder followed by the Dockerfile OS version, to identify the release build with the Dockerfile. Docker doesn't allow uppercase letters in the Dockertag.
@@ -85,7 +85,7 @@ Create a Yocto Docker image and build:
       
       ::
 
-         bash docker/docker_build.sh -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.65-qli.1.4-ver.1.0_22.04
+         bash docker/docker_build.sh -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.65-qli.1.4-ver.1.1_22.04
 
    If you face any issues while running ``docker_build.sh``, see the
    following solution:
@@ -96,7 +96,7 @@ Create a Yocto Docker image and build:
 
          # Error 1: Cache-related issue.
             # If you are facing issues with the docker build command, try using --no-cache option. This option forces rebuilding of the layers that are already available
-            bash docker/docker_build.sh -n --no-cache -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.65-qli.1.4-ver.1.0_22.04
+            bash docker/docker_build.sh -n --no-cache -f ./docker/dockerfiles/Dockerfile_22.04 -t qcom-6.6.65-qli.1.4-ver.1.1_22.04
 
          # Error2: Response from daemon: Get "https://registry-1.docker.io/v2/": http: server gave HTTP response to HTTPS client
             # Check with your IT administrator to acquire ``registry-mirrors`` URL and replace <docker-mirror-host>`` in the following solution 
@@ -119,16 +119,16 @@ Create a Yocto Docker image and build:
       
       ::
 
-         bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.0_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.0 -M <machine> --build-override <override> --alternate-repo true
-         # Example, bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.0_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.0 -M qcs6490-rb3gen2-vision-kit --build-override custom --alternate-repo true 
+         bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.1 -M <machine> --build-override <override> --alternate-repo true
+         # Example, bash docker/docker_run.sh -t qcom-6.6.65-qli.1.4-ver.1.1_22.04 -r qcom-6.6.65-QLI.1.4-Ver.1.1 -M qcs6490-rb3gen2-vision-kit --build-override custom --alternate-repo true 
 
    .. note::
-      For various ``<machine>`` and ``<override>`` combinations, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+      For various ``<machine>`` and ``<override>`` combinations, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
    The build workspace is available in
    ``<qcom-download-utils download path>/<release>/build-qcom-wayland``.
    For example,
-   ``qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.0/build-qcom-wayland``.
+   ``qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1/build-qcom-wayland``.
 
 .. note:: 
    - **# ERROR: error.GitError: git config (‘–replace-all’,‘color.ui’, ‘auto’): error: couldn't write config file /home/$USER/.gitconfig: Device or resource busy**
@@ -150,9 +150,9 @@ Build QIMP SDK image
          ::
 
             # Run the following commands inside the base image build location
-            cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.0
+            cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
             bash
-            docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.0_22.04 /bin/bash
+            docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.1_22.04 /bin/bash
 
    #. Clone the QIMP SDK layer into the workspace:
 
@@ -161,7 +161,7 @@ Build QIMP SDK image
          ::
 
             git clone https://github.com/quic-yocto/meta-qcom-qim-product-sdk -b <meta-qcom-qim-product-sdk release tag> layers/meta-qcom-qim-product-sdk
-            # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.0_qim-product-sdk-1.1.1
+            # Example, <meta-qcom-qim-product-sdk release tag> is qcom-6.6.65-QLI.1.4-Ver.1.1_qim-product-sdk-1.1.2
 
       Build the QIMP SDK layer:
 
@@ -183,7 +183,7 @@ Build QIMP SDK image
             # and enters into build-qcom-wayland directory.
 
       .. note::
-          For the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+          For the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
    #. Build the software image:
 
@@ -215,7 +215,7 @@ To rebuild after any modifications to the software release, use your existing wo
    .. container:: screenoutput
 
        REPOSITORY                                               TAG                         IMAGE ID       CREATED        SIZE
-       qcom-6.6.65-qli.1.4-ver.1.0_22.04                        latest                      8fcea388d8ca   2 days ago     1.47GB
+       qcom-6.6.65-qli.1.4-ver.1.1_22.04                        latest                      8fcea388d8ca   2 days ago     1.47GB
 
 #. Attach the container:
 
@@ -224,14 +224,14 @@ To rebuild after any modifications to the software release, use your existing wo
       ::
 
          # Run the following commands outside the Docker container
-         cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.0
+         cd <workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
 
          # Run the following commands inside the base image build location
          bash
-         docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.0_22.04 /bin/bash
+         docker run -it -v "${HOME}/.gitconfig":"/home/${USER}/.gitconfig" -v "${HOME}/.netrc":"/home/${USER}/.netrc" -v $(pwd):$(pwd) -w $(pwd) qcom-6.6.65-qli.1.4-ver.1.1_22.04 /bin/bash
 
          # Example
-         WORKSPACE=<workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.0
+         WORKSPACE=<workspace_path>/qcom-download-utils/qcom-6.6.65-QLI.1.4-Ver.1.1
 
 #. Set up the build environment:
 
@@ -246,7 +246,7 @@ To rebuild after any modifications to the software release, use your existing wo
          # and enters into build-qcom-wayland directory.
 
    .. note::
-      For various ``<machine>`` and ``<override>`` combinations, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__.
+      For various ``<machine>`` and ``<override>`` combinations, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__.
 
 #. Build the software image:
 

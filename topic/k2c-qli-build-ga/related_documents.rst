@@ -18,8 +18,8 @@ Related documents
    * - `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-27>`__
      - 80-70018-27
 
-   * - `Qualcomm Linux Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/>`__
-     - RNO-241225194606
+   * - `Qualcomm Linux Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/>`__
+     - RNO-250403001134
 
    * - `Qualcomm Linux Kernel Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-3>`__
      - 80-70018-3

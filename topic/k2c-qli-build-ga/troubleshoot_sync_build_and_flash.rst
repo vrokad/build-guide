@@ -287,17 +287,22 @@ Sync
       ::
 
          # Replace the following command
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linuxSTXscarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linuxSTXscarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.1.xml
          # with
-         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.0.xml
+         repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m qcom-6.6.65-QLI.1.4-Ver.1.1.xml
 
 -  **pull access denied for 032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool**
 
    This error may occur while running the ``qsc-cli`` download command.
 
    **Error excerpt**
-   Unable to find image '032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool:20.04.20231220102843864.9' locally
-   docker: Error response from daemon: pull access denied for 032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool, repository doesn't exist or may require 'docker login': denied: Your authorization token has expired. Reauthenticate and try again.
+
+   .. container:: nohighlight
+      
+      ::
+
+         Unable to find image '032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool:20.04.20231220102843864.9' locally
+         docker: Error response from daemon: pull access denied for 032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool, repository doesn't exist or may require 'docker login': denied: Your authorization token has expired. Reauthenticate and try again.
 
    **Solution**
       

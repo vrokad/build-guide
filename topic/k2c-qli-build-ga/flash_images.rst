@@ -7,7 +7,8 @@ Follow these steps to flash the software images:
 
 1. Update the ``udev`` rules (one-time prerequisite).
 #. Move the device to Emergency Download (EDL) mode.
-#. Provision UFS.
+#. Provision UFS (one-time prerequisite).
+#. Flash SAIL (one-time prerequisite).
 #. Flash CDT.
 #. Flash the software:
 
@@ -206,7 +207,7 @@ The device must be in the EDL mode before you flash the software. The Qualcomm s
 
                .. note:: Dip switch S5-4 must be turned off after the flashing is complete.
 
-            .. group-tab:: Qualcomm® IQ-9075 EVK
+            .. group-tab:: Qualcomm® Dragonwing™ IQ-9075 EVK
 
                1. Switch on the dip switch S2-8 to put the device in the EDL mode.
 
@@ -261,11 +262,11 @@ Provision UFS
 Universal Flash Storage (UFS) provisioning helps to divide the storage into many LUNs, which stores different types of data separately. This improves access efficiency and system organization.
 
 .. note::
-    - UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/ReleaseNote.html#release-specific-information>`__.
+    - UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/ReleaseNote.html#release-specific-information>`__.
 
 1. Download the provision file.
 
-   Based on the required SoC, download the respective ‘provision’ from the *UFS Provision* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/ReleaseNote.html#release-specific-information>`__.
+   Based on the required SoC, download the respective ‘provision’ from the *UFS Provision* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/ReleaseNote.html#release-specific-information>`__.
 
    .. container:: nohighlight
       
@@ -320,6 +321,41 @@ Universal Flash Storage (UFS) provisioning helps to divide the storage into many
 
    .. note:: Use QDL binary based on the host computer architecture. For example, linux_x64 supported qdl binary is ``qdl_<version>/QDL_Linux_x64/qdl``.
 
+Flash SAIL
+-----------
+.. note::
+   - SAIL is applicable only for QCS9075.
+   - Ensure that the device is in :ref:`EDL mode <move_to_EDL>`.
+
+1. Download the QDL tool.
+
+   QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
+
+   Acquire the latest version of the QDL tool using one of the following methods:
+   
+   - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
+   - Run the following command to download using CLI:
+     
+     .. container:: nohighlight
+      
+        ::
+     
+           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+
+#. Flash the SAIL.
+
+   .. container:: nohighlight
+      
+      ::
+
+         # SAIL image is under <workspace_path>/build-<DISTRO>/tmp-glibc/deploy/images/<MACHINE>/<IMAGE>/sail_nor
+         # build_path: For DISTRO=qcom-wayland, it's build-qcom-wayland. 
+         #             For DISTRO=qcom-robotics-ros2-humble, it's build-qcom-robotics-ros2-humble
+         # qdl --storage spinor <prog.mbn> [<program> <patch> ...]
+         # Example: build_path is build-qcom-wayland
+         cd <workspace_path>/build-qcom-wayland/tmp-glibc/deploy/images/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image/sail_nor
+         <qdl_download_path>/qdl_<version>/QDL_Linux_x64/qdl --storage spinor prog_firehose_ddr.elf rawprogram0.xml patch0.xml
+
 .. _flash_cdt:
 
 Flash CDT
@@ -330,7 +366,7 @@ CDT provides platform/device-dependent data such as platform ID, subtype, versio
 
 1. Download the CDT binary.
 
-   Based on the required reference kit, download the respective CDT from the *CDT* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-241225194606/ReleaseNote.html#release-specific-information>`__.
+   Based on the required reference kit, download the respective CDT from the *CDT* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250403001134/ReleaseNote.html#release-specific-information>`__.
 
    .. container:: nohighlight
       

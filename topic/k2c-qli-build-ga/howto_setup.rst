@@ -340,7 +340,7 @@ If you face USB or Ethernet connectivity issues on the RB3 Gen 2 device, conside
 
 .. rubric:: Prerequisites
 
-- Upgrade the software as described in `Update Software <hhttps://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/qsg-landing-page.html#update-the-softwarew>`__ before updating the Renesas firmware.
+- Upgrade the software as described in `Update the software <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-253/upgrade-rb3gen2-software.html>`__ before updating the Renesas firmware.
 - Connect the device to the Linux host through the USB Type-C cable.
 
 .. note:: The following procedure is applicable only to Ubuntu 22.04 host. If you are using a Windows or macOS host, set up an Ubuntu virtual machine by following the instructions described in the `Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-41/getting-started.html>`__.

@@ -110,35 +110,36 @@ The following table shows an example mapping of the Yocto layers to the manifest
        ``qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0.xml``
      - ``qcom-robotics-ros2-humble``
 
-.. note::
-   - Syntax for the manifest release tag:
+The release tag syntax is as follows:
+
+- Manifest release tag:
      
-     ``qcom-<Linux LTS Kernel Version>-QLI.<version>-Ver.<release>.xml``
+  ``qcom-<Linux LTS Kernel Version>-QLI.<version>-Ver.<release>.xml``
     
-     For example, the manifest release tag ``qcom-6.6.90-QLI.1.5-Ver.1.0.xml`` denotes the following:
+  For example, the manifest release tag ``qcom-6.6.90-QLI.1.5-Ver.1.0.xml`` denotes the following:
      
-     - 6.6.90: Qualcomm Linux kernel
-     - QLI.1.5: Qualcomm Linux v1.5
-     - 1.0: Milestone release
+  - 6.6.90: Qualcomm Linux kernel
+  - QLI.1.5: Qualcomm Linux v1.5
+  - 1.0: Milestone release
 
-   - Syntax for the additional productization manifest release tag:
+- Additional productization manifest release tag:
    
-     ``qcom-<Linux LTS Kernel version>-QLI.<version>-Ver.<milestone release>_<product/customization>-<patch release>.xml``
+  ``qcom-<Linux LTS Kernel version>-QLI.<version>-Ver.<milestone release>_<product/customization>-<patch release>.xml``
 
-     For example, the additional productization manifest release tag ``qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0.xml`` denotes the following:
+  For example, the additional productization manifest release tag ``qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0.xml`` denotes the following:
      
-     - 6.6.90: Qualcomm Linux kernel
-     - QLI.1.5: Qualcomm Linux v1.5
-     - qim-product-sdk-2.0.0: Qualcomm IM SDK release on top of QLI.1.5
+  - 6.6.90: Qualcomm Linux kernel
+  - QLI.1.5: Qualcomm Linux v1.5
+  - qim-product-sdk-2.0.0: Qualcomm IM SDK release on top of QLI.1.5
 
-       Other product/customization examples:
+    Other product/customization examples:
 
-       - *realtime-linux-1.0*
-       - *robotics-product-sdk-1.1*
-     - 1.0: Milestone release
-     - 2.0.0: Patch release associated with the milestone release
+    - *realtime-linux-1.0*
+    - *robotics-product-sdk-1.1*
+  - 1.0: Milestone release
+  - 2.0.0: Patch release associated with the milestone release
 
-   - For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/qualcomm_linux_metadata_layers_overview.html#qualcomm-linux-metadata-layers>`__.
+For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/qualcomm_linux_metadata_layers_overview.html#qualcomm-linux-metadata-layers>`__.
 
 Build a BSP image
 ^^^^^^^^^^^^^^^^^^

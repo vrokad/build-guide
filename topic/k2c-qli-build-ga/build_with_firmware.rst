@@ -4,6 +4,8 @@ Build with firmware sources
 Sync firmware
 ^^^^^^^^^^^^^^
 
+Commands in the following sections are based on the binary and source for firmware images without modem and GPS (see the command in :ref:`Mapping firmware distributions to git repositories <Mapping_firmware_table>`). Hence, ``qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is used. If you use any other distribution, then update the directory accordingly.
+
 The following table describes the Qualcomm Yocto layers and release tags:
 
 .. tabularcolumns:: |p{3cm}|p{4cm}|p{3cm}|p{4cm}|
@@ -38,7 +40,7 @@ The following table describes the Qualcomm Yocto layers and release tags:
      - firmware release tag
      - r1.0_00090.0
 
-The following tables describe the firmware distributions that you can download:
+The following tables describe the firmware distributions that you can download. For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/qualcomm_linux_metadata_layers_overview.html#qualcomm-linux-metadata-layers>`__.
 
 .. _build_mapping_access_levels:
 
@@ -150,7 +152,7 @@ The following tables describe the firmware distributions that you can download:
 
        ``meta-qcom-qim-product-sdk``
 
-.. note:: For more information about the Yocto layers, see `Qualcomm Linux metadata layers <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/qualcomm_linux_metadata_layers_overview.html#qualcomm-linux-metadata-layers>`__.
+The following table maps the firmware distributions to git repositories: 
 
 .. _Mapping_firmware_table:
 
@@ -190,8 +192,6 @@ The following tables describe the firmware distributions that you can download:
    * - Qualcomm_Linux.SPF.1.0|AMSS|Standard|OEM|QIMPSDK
      - ``git clone -b <firmware release tag> --depth 1 https://qpm-git.qualcomm.com/home2/git/qualcomm/qualcomm-linux-spf-1-0_amss_standard_oem_qimpsdk.git``
      - ``qualcomm-linux-spf-1-0_amss_standard_oem_qimpsdk``
-
-.. note:: Commands in the following sections are based on the binary and source for firmware images without modem and GPS (see the command in :ref:`Mapping firmware distributions to git repositories <Mapping_firmware_table>`). Hence, ``qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk`` is used. If you use any other distribution, then update the directory accordingly.
 
 The **Git command** column (in the :ref:`Mapping firmware distributions to git repositories <Mapping_firmware_table>` table) provides information about the git repositories that contain the firmware sources. Qualcomm servers host these repositories. Clone the appropriate repositories based on your access profile and use case.
 
@@ -326,20 +326,20 @@ Build firmware
          -  Python version: Python 3.10.2
          -  libffi6 package 
          
-         **Nanopb integration (one-time setup)**
-
-         .. container:: nohighlight
-      
-            ::
-
-               cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/ADSP.HT.5.5.c8/adsp_proc/qsh_api
-               curl https://jpa.kapsi.fi/nanopb/download/nanopb-0.3.9.5-linux-x86.tar.gz -o nanopb-0.3.9.5-linux-x86.tar.gz
-               cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/ADSP.HT.5.5.c8/adsp_proc/
-               python qsh_api/build/config_nanopb_dependency.py -f nanopb-0.3.9.5-linux-x86
-
          **Build steps**
 
-         1. Go to the following directory:
+         1. Nanopb integration (one-time setup):
+
+            .. container:: nohighlight
+      
+               ::
+
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/ADSP.HT.5.5.c8/adsp_proc/qsh_api
+                  curl https://jpa.kapsi.fi/nanopb/download/nanopb-0.3.9.5-linux-x86.tar.gz -o nanopb-0.3.9.5-linux-x86.tar.gz
+                  cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/ADSP.HT.5.5.c8/adsp_proc/
+                  python qsh_api/build/config_nanopb_dependency.py -f nanopb-0.3.9.5-linux-x86
+         
+         #. Go to the following directory:
 
             .. container:: nohighlight
       
@@ -347,7 +347,7 @@ Build firmware
 
                   cd <FIRMWARE_ROOT>/qualcomm-linux-spf-1-0_ap_standard_oem_nm-qimpsdk/ADSP.HT.5.5.c8/adsp_proc/build/ms
 
-         2. Clean the build:
+         #. Clean the build:
 
             .. container:: nohighlight
       
@@ -355,7 +355,7 @@ Build firmware
 
                   python ./build_variant.py kodiak.adsp.prod --clean
 
-         3. Build the image:
+         #. Build the image:
 
             .. container:: nohighlight
       
@@ -368,9 +368,6 @@ Build firmware
          **Tools required**
 
          -  Compiler version: LLVM version must be updated to 14.0.4
-
-            .. note:: 
-               To avoid build errors, ensure that there is a ``/`` at the end of the command.
 
             .. container:: nohighlight
       

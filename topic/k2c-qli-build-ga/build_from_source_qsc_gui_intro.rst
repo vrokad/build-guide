@@ -13,4 +13,8 @@ Configure, download, compile, and flash Qualcomm Linux using the Qualcomm\ :sup:
 
 .. include:: qsc_install.rst
 
-.. include:: qsc_launcher.rst
+.. include:: download_software_launcher.rst
+
+.. include:: build_default_config_launcher.rst
+
+.. include:: build_own_config_launcher.rst

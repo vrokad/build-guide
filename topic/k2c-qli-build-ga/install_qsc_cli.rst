@@ -3,6 +3,8 @@
 Install QSC CLI
 --------------------
 
+To register your Qualcomm email ID, go to `Qualcomm support page <https://www.qualcomm.com/support/working-with-qualcomm>`__.
+
 1. Install curl (if not installed already):
 
    .. container:: nohighlight
@@ -33,8 +35,6 @@ Install QSC CLI
          sudo apt install ./qsc_installer.deb
 
 4. Sign in to ``qsc-cli`` using your registered email ID:
-
-   .. note:: To register with Qualcomm, go to https://www.qualcomm.com/support/working-with-qualcomm.
 
    .. container:: nohighlight
       

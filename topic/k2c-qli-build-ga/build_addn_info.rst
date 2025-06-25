@@ -5,7 +5,7 @@
 Build with GitHub using firmware and extras
 ============================================
 
-.. note:: This information is applicable only for authorized users. To upgrade your access, go to http://www.qualcomm.com/support/working-with-qualcomm.
+.. note:: This information is applicable only for authorized users. To upgrade your access, go to `Qualcomm support page <https://www.qualcomm.com/support/working-with-qualcomm>`__.
 
 Use this information to build various Qualcomm Linux Yocto layers including the ``meta-qcom-hwe``, ``meta-qcom-extras``, ``meta-qcom-qim-product-sdk``,
 and ``meta-qcom-robotics-sdk`` layers using selective proprietary sources and binaries/libraries.

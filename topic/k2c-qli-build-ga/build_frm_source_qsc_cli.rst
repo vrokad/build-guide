@@ -5,10 +5,14 @@
 Build with QSC CLI
 ===================
 
-The following sections explain how to configure, download, compile, and flash Qualcomm Linux using the QSC CLI.
+Configure, download, compile, and flash Qualcomm Linux using the QSC CLI.
 
 .. include:: host_machine_requirements.rst
 
 .. include:: install_qsc_cli.rst
 
-.. include:: build_qsc_cli.rst
+.. include:: download_software_cli.rst
+
+.. include:: build_default_config_cli.rst
+
+.. include:: build_own_config_cli.rst

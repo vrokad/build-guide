@@ -66,14 +66,13 @@ Install and configure the required software tools on the Ubuntu host computer.
 Build a BSP image
 ^^^^^^^^^^^^^^^^^^^^^
 
+Dockertag uses lowercase letters for the release folder followed by the Dockerfile OS version, to identify the release build with the Dockerfile. Docker doesn't allow uppercase letters in the Dockertag. To troubleshoot Docker issues, see :ref:`Troubleshoot Docker <troubleshoot_docker>`.
+
 Create and build a Yocto Docker image:
 
-1. Run ``docker_build.sh`` to create the Docker image with Dockerfile (*Dockerfile_22.04*) and Dockertag (``qcom-6.6.90-qli.1.5-ver.1.0_22.04``). Use this Docker image to create the container environment and run the Yocto build.
+1. Run ``docker_build.sh`` to create the Docker image with Dockerfile (``Dockerfile_22.04``) and Dockertag (``qcom-6.6.90-qli.1.5-ver.1.0_22.04``). Use this Docker image to create the container environment and run the Yocto build.
 
-   **Dockertag**: Use lowercase letters for the release folder followed by the Dockerfile OS version, to identify the release build with the Dockerfile. Docker doesn't allow uppercase letters in the Dockertag.
-
-   .. note:: 
-      To troubleshoot Docker issues, see :ref:`Troubleshoot Docker <troubleshoot_docker>`.
+   
 
    .. container:: nohighlight
       
@@ -245,8 +244,8 @@ To rebuild after any modifications to the software release, use your existing wo
       ::
 
          bitbake qcom-multimedia-image
-
-Close Docker before you flash the images.
+         
+#. Close Docker before you flash the images.
 
 Flash
 ^^^^^^^

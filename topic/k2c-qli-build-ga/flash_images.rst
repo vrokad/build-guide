@@ -73,7 +73,8 @@ Force the device into EDL mode
 
 The device must be in the EDL mode before you flash the software. The Qualcomm supported device by default enters EDL mode if there is no image on the device after power up or if it's corrupted. To force the device into EDL mode, use any one of the following methods.
 
-**Use UART**
+Use UART
+^^^^^^^^^
 
 Use UART only if the device has a preloaded build. This procedure applies to the Ubuntu host environment.
 
@@ -103,7 +104,8 @@ Use UART only if the device has a preloaded build. This procedure applies to the
 
           Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
 
-**Use ADB**
+Use ADB
+^^^^^^^^^
 
 This procedure applies to the Ubuntu host environment. Use ADB only if the device has a preloaded build. 
 
@@ -143,7 +145,8 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
           Bus 002 Device 014: ID 05c6:9008 Qualcomm, Inc. Gobi Wireless Modem (QDL mode)
 
-**Manual**
+Manual
+^^^^^^^^
 
 .. container:: persistenttab-soc
 
@@ -153,7 +156,7 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
          1. Press and hold the **F_DL** button.
 
-            .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.jpg
+            .. image:: ../../media/k2c-qli-build-ga/RB3Gen2_device.png
 
          #. Connect the device to a **+12 V wall power supply**.
 
@@ -183,7 +186,7 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
             .. group-tab:: IQ-9 Beta Evaluation Kit (EVK)
 
-               1. Switch on the dip switch S5-4 to put the device in the EDL mode.
+               1. Put the device in EDL mode by turning on the dip switch S5-4.
 
                   .. image:: ../../media/k2c-qli-build-ga/qcs9075_qdl_mode_manual.png
 
@@ -207,7 +210,7 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
             .. group-tab:: IQ-9075 EVK
 
-               1. Switch on the dip switch S2-8 to put the device in the EDL mode.
+               1. Put the device in EDL mode by turning on the dip switch S2-8.
 
                   .. image:: ../../media/k2c-qli-build-ga/IQ_9075_EVK.png
 
@@ -235,7 +238,7 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
             .. group-tab:: IQ-8 Beta Evaluation Kit (EVK)
 
-               1. Switch on the dip switch S5-4 to put the device in the EDL mode.
+               1. Put the device in EDL mode by turning on the dip switch S5-4.
 
                   .. image:: ../../media/k2c-qli-build-ga/qcs9075_qdl_mode_manual.png
 
@@ -259,7 +262,7 @@ This procedure applies to the Ubuntu host environment. Use ADB only if the devic
 
             .. group-tab:: IQ-8275 EVK
 
-               1. Switch on the dip switch S2-8 to put the device in the EDL mode.
+               1. Put the device in EDL mode by turning on the dip switch S2-8.
 
                   .. image:: ../../media/k2c-qli-build-ga/IQ_9075_EVK.png
 

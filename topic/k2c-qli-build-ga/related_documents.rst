@@ -24,13 +24,13 @@ Related documents
    * - `Qualcomm Linux Kernel Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-3>`__
      - 80-70020-3
 
-   * - `Qualcomm Dragonwing RB3 Gen 2 Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-253>`__
-     - 80-70020-253
+   * - `Qualcomm Dragonwing™ RB3 Gen 2 Development Kit Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-251>`__
+     - 80-70020-251
 
-   * - `Qualcomm® Intelligent Multimedia (IM SDK) Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-51>`__
+   * - `Qualcomm® Intelligent Multimedia SDK (IM SDK) Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-51>`__
      - 80-70020-51
 
-   * - `Qualcomm® Linux Intelligent Robotics SDK (QIR SDK) 2.0 Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-65220-2>`__
+   * - `Qualcomm® Intelligent Robotics SDK (QIR SDK) Quick Start Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-265>`__
      - 80-70020-265
 
    * - `Qualcomm Linux Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-41/>`__

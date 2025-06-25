@@ -75,7 +75,7 @@ The following table describes the files in the images directory:
    * - ``rawprogram*.xml``
      - Image ``lun`` and start sector ``lba`` values
    * - ``efi.bin``
-     - EFI system partition image. For more information, see `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/qualcomm_linux_software_components.html#managing-partitions-in-qualcomm-linux>`__.
+     - EFI system partition image. For more information, see `Qualcomm Linux Yocto Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27/managing_partitions_in_qualcomm_linux.html#linux-operating-system-partitions>`__.
    * - ``qdl``
      - Flashing tool binary
    * - ``dtb.bin``

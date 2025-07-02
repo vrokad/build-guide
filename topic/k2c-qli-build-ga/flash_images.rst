@@ -290,11 +290,11 @@ Provision UFS
 ---------------
 Universal flash storage (UFS) provisioning helps to divide the storage into many LUNs, which stores different types of data separately. This improves access efficiency and system organization.
 
-UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/ReleaseNote.html#release-specific-information>`__.
+UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-provisioned. To download the provision XML file and to check the applicability of UFS provisioning for different SoCs, see the table *UFS Provision* in `Release Specific Information <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/ReleaseNote.html#release-specific-information>`__.
 
 1. Download the provision file.
 
-   Based on the required SoC, download the respective ‘provision’ from the *UFS Provision* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/ReleaseNote.html#release-specific-information>`__.
+   Based on the required SoC, download the respective ‘provision’ from the *UFS Provision* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/ReleaseNote.html#release-specific-information>`__.
 
    .. container:: nohighlight
       
@@ -307,20 +307,19 @@ UFS is provisioned by default. If there are any changes in LUNs, UFS must be re-
          unzip <downloaded_zip_file>
          # Example, unzip provision.zip   
 
-#. Download the Qualcomm Device Loader (QDL). QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
-
-   Acquire the latest version of the QDL tool using one of the following methods:
+#. Download the Qualcomm Device Loader (QDL). QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images. Acquire the latest version of the QDL tool using one of the following methods:
    
    - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
-   - Run the following command to download using CLI:
+   - Run the following command to download and unzip using CLI:
      
      .. container:: nohighlight
       
         ::
      
-           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/latest.zip
+           unzip latest.zip
 
-   Run the following command to provide executable permission to QDL:
+#. Run the following command to provide executable permission to QDL:
 
    .. container:: nohighlight
       
@@ -346,18 +345,25 @@ Flash SAIL
 -----------
 Safety Island (SAIL) is applicable only for the Qualcomm Dragonwing™ IQ-9075 and the Qualcomm Dragonwing™ IQ-8275 development kits. If you're not using one of these development kits, skip to :ref:`Flash CDT <flash_cdt>`.
 
-1. Download the QDL tool. QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images.
-
-   Acquire the latest version of the QDL tool using one of the following methods:
+1. Download the QDL tool. QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images. Acquire the latest version of the QDL tool using one of the following methods:
    
    - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
-   - Run the following command to download using CLI:
+   - Run the following command to download and unzip using CLI:
 
      .. container:: nohighlight
      
         ::
       
-          wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+          wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/latest.zip
+          unzip latest.zip
+
+#. Run the following command to provide executable permission to QDL:
+
+   .. container:: nohighlight
+      
+      ::
+   
+         chmod -R 777 <qdl_download_path>
 
 #. Flash the SAIL.
 
@@ -381,7 +387,7 @@ Configuration data table (CDT) provides platform/device-dependent data such as p
 
 1. Download the CDT binary.
 
-   Based on the required reference kit, download the respective CDT from the *CDT* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/ReleaseNote.html#release-specific-information>`__.
+   Based on the required reference kit, download the respective CDT from the *CDT* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/ReleaseNote.html#release-specific-information>`__.
 
    .. container:: nohighlight
       
@@ -397,13 +403,22 @@ Configuration data table (CDT) provides platform/device-dependent data such as p
 #. Download the QDL tool. QDL is a software tool that communicates with the Qualcomm USB devices to upload a flash loader and flash software images. Acquire the latest version of the QDL tool using one of the following methods:
    
    - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
-   - Run the following command to download using CLI:
+   - Run the following command to download and unzip using CLI:
      
      .. container:: nohighlight
       
         ::
      
-           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+           wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/latest.zip
+           unzip latest.zip
+
+#. Run the following command to provide executable permission to QDL:
+
+   .. container:: nohighlight
+      
+      ::
+   
+         chmod -R 777 <qdl_download_path>   
 
 #. Flash the CDT:
 
@@ -439,13 +454,22 @@ Flash software using QDL
 #. Download the QDL tool. QDL is a software tool that communicates with Qualcomm USB devices to upload a flash loader and flash software images. Acquire the latest version of the QDL tool using one of the following methods:
    
    - Download the tool from https://softwarecenter.qualcomm.com/#/catalog/item/Qualcomm_Device_Loader and unzip the contents of the downloaded folder.
-   - Run the following command to download using CLI:
+   - Run the following command to download and unzip using CLI:
      
      .. container:: nohighlight
       
       ::
      
-        wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/Latest.zip
+        wget https://softwarecenter.qualcomm.com/api/download/software/tools/Qualcomm_Device_Loader/Windows/latest.zip
+        unzip latest.zip
+
+#. Run the following command to provide executable permission to QDL:
+
+   .. container:: nohighlight
+      
+      ::
+   
+         chmod -R 777 <qdl_download_path>
 
 #. Flash the images:
 

@@ -14,7 +14,7 @@ Connect to a UART shell
 
       .. group-tab:: QCS6490/QCS5430
          
-         To set up the debug UART connection and view the diagnostic messages, connect the micro-USB cable from the micro-USB port on the RB3 Gen 2 device to the Linux host.
+         To set up the debug UART connection and view the diagnostic messages, connect the micro-USB cable from the micro-USB port on the device to the Linux host.
 
          .. image:: ../../media/k2c-qli-build-ga/micro_usb_port.png
 
@@ -247,7 +247,7 @@ If you are already connected to a network and need to reconnect to another netwo
 
 Establish the :ref:`network connectivity <connect_to_network>` before connecting to SSH.
 
-1. Locate the IP address of the RB3 Gen 2 device according to the type of network connection, using the UART console on the Linux host:
+1. Locate the IP address of the device according to the type of network connection, using the UART console on the Linux host:
 
    For Ethernet:
 
@@ -316,7 +316,7 @@ To check if the USB to Ethernet controller is enumerated, run the following comm
    Bus 001 Device 002: ID 05e3:0610 Genesys Logic, Inc. Hub
    Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
 
-Connect an RJ45 cable to the RB3 Gen 2 device.
+Connect an RJ45 cable to the device.
 
 To check the Ethernet IP address, run the following command:
 
@@ -346,7 +346,7 @@ To check the Ethernet IP address, run the following command:
 Update USB and Ethernet controller firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-If you face USB or Ethernet connectivity issues on the RB3 Gen 2 device, consider updating the firmware for the USB controller.
+If you face USB or Ethernet connectivity issues on the device, consider updating the firmware for the USB controller.
 
 .. rubric:: Prerequisites
 

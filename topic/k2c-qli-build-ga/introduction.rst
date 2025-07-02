@@ -12,7 +12,7 @@ Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-27>`__ be
 Download prebuilt images and flash the software
 ------------------------------------------------
 
-- In the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__, go to the *Artifactory links to prebuilt flashable images and eSDK* table to download prebuilt flashable images and the Platform eSDK.
+- In the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__, go to the *Artifactory links to prebuilt flashable images and eSDK* table to download prebuilt flashable images and the Platform eSDK.
 
 - The Platform eSDK is an installer that let's you sync, change, compile, and install applications and open-source plug-ins in a complete Yocto environment. For more information, see :ref:`Download the Platform eSDK <download_platform_esdk>`.
 

@@ -24,7 +24,7 @@ The migration process depends on the development, branching, and integration wor
       files.
    #. Qualcomm provides git history to all the source repositories.
       You can see a reference list of repositories in the `Release
-      Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/>`__.
+      Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/>`__.
       For the Qualcomm repositories branched and modified at your
       end, perform the following steps:
 
@@ -57,7 +57,7 @@ customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70020-
 Download layers for the Qualcomm IM SDK build using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/>`__.
+For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/>`__.
 
 ::
 
@@ -65,7 +65,7 @@ For the latest ``<manifest release tag>``, see the section *Build-critical relea
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0.xml
+   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.1_qim-product-sdk-2.0.1.xml
    repo sync
 
 .. note:: 
@@ -74,7 +74,7 @@ For the latest ``<manifest release tag>``, see the section *Build-critical relea
 Download layers for the QIR SDK build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/>`__.
+For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/>`__.
 
 ::
 
@@ -82,7 +82,7 @@ For the latest ``<manifest release tag>``, see the section *Build-critical relea
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0_robotics-product-sdk-1.0.xml
+   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.1_robotics-product-sdk-1.1.xml
    repo sync
 
 .. note:: 
@@ -91,7 +91,7 @@ For the latest ``<manifest release tag>``, see the section *Build-critical relea
 Download layers for the real-time Linux build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/>`__.
+For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/>`__.
 
 ::
 
@@ -99,7 +99,7 @@ For the latest ``<manifest release tag>``, see the section *Build-critical relea
    mkdir <WORKSPACE_DIR>
    cd <WORKSPACE_DIR>
    repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.0_realtime-linux-1.1.xml
+   # Example, <manifest release tag> is qcom-6.6.90-QLI.1.5-Ver.1.1_realtime-linux-1.1.xml
    repo sync
 
 .. note:: 
@@ -121,7 +121,7 @@ commands and already have an existing ``<WORKSPACE DIR>``, follow these steps to
 
    .. note:: For more information about 
              ``<meta-qcom-qim-product-sdk release tag>``, see https://github.com/quic-yocto/meta-qcom-qim-product-sdk/tags. An
-             example ``<meta-qcom-qim-product-sdk release tag>`` is ``qcom-6.6.90-QLI.1.5-Ver.1.0_qim-product-sdk-2.0.0.xml``.
+             example ``<meta-qcom-qim-product-sdk release tag>`` is ``qcom-6.6.90-QLI.1.5-Ver.1.1_qim-product-sdk-2.0.1.xml``.
 
 2. Set up the build environment:
 
@@ -132,7 +132,7 @@ commands and already have an existing ``<WORKSPACE DIR>``, follow these steps to
       # source setup-environment: Sets the environment, creates the build directory build-qcom-wayland,
       # and enters into build-qcom-wayland directory
 
-   .. note:: To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250617225208/>`__.
+   .. note:: To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250630224842/>`__.
 
 3. Build the software image:
 

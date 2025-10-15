@@ -66,7 +66,7 @@ Generate an eSDK
          bitbake -c do_populate_sdk_ext <image>
          # Example, bitbake -c do_populate_sdk_ext qcom-multimedia-image
 
-   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250926012339/>`__.    
+   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-251013063244/>`__.    
 
 #. After building with ``meta-qcom-extras`` and firmware sources with
    QSC CLI:
@@ -124,7 +124,7 @@ Generate an eSDK
             cd /local/mnt/workspace/qcom-download-utils/<release>
 
             # Example
-            cd /local/mnt/workspace/qcom-download-utils/qcom-6.6.97-QLI.1.6-Ver.1.1
+            cd /local/mnt/workspace/qcom-download-utils/qcom-6.6.97-QLI.1.6-Ver.1.2
 
    #. Set up the environment and issue an eSDK build:
 
@@ -185,7 +185,7 @@ Rebuild using a Docker environment
          # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
          bitbake qcom-multimedia-image
 
-   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250926012339/>`__.
+   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-251013063244/>`__.
 
 #. Build image ``qcom-multimedia-test-image``:
 
@@ -294,7 +294,7 @@ Download the Platform eSDK
 
 3. Download the Platform eSDK.
 
-   Based on the required SoC, download the respective eSDK from the *Artifactory links to pre-built flashable images and eSDK* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-250926012339/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
+   Based on the required SoC, download the respective eSDK from the *Artifactory links to pre-built flashable images and eSDK* table of the `Release Notes <https://docs.qualcomm.com/bundle/publicresource/topics/RNO-251013063244/ReleaseNote.html#prebuilt-flashable-images-along-with-esdk>`__.
 
    .. container:: nohighlight
       
@@ -313,8 +313,8 @@ Download the Platform eSDK
 
          mkdir <esdk_download_path>
          cd <esdk_download_path>
-         wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/x86-qcom-6.6.97-QLI.1.6-Ver.1.1_qim-product-sdk-2.1.1.zip
-         unzip x86-qcom-6.6.97-QLI.1.6-Ver.1.1_qim-product-sdk-2.1.1.zip
+         wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qimpsdk/qcs6490-rb3gen2-core-kit/x86-qcom-6.6.97-QLI.1.6-Ver.1.2_qim-product-sdk-2.1.1.zip
+         unzip x86-qcom-6.6.97-QLI.1.6-Ver.1.2_qim-product-sdk-2.1.1.zip
 
       After unzipping, you must see the eSDK installer at ``<esdk_download_path>``:
       

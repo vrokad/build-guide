@@ -54,23 +54,6 @@ Customize Qualcomm Linux
 See `User
 customizations <https://docs.qualcomm.com/bundle/publicresource/topics/80-70023-27/customize_qualcomm_linux.html>`__.
 
-Download layers for the QIR SDK build by using the manifest release tag
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-For the latest ``<manifest release tag>``, see the section *Build-critical release tags* in the `Release Notes <https://docs.qualcomm.com/doc/80-70023-300/>`__.
-
-::
-
-   # cd to directory where you have 300 GB of free storage space to create your workspaces
-   mkdir <WORKSPACE_DIR>
-   cd <WORKSPACE_DIR>
-   repo init -u https://github.com/quic-yocto/qcom-manifest -b qcom-linux-scarthgap -m <manifest release tag>
-   # Example, <manifest release tag> is qcom-6.6.116-QLI.1.7-Ver.1.1_robotics-sdk-1.1.xml
-   repo sync
-
-.. note:: 
-   For the steps to set up the environment and build software images, see :ref:`Build QIR SDK image <build_qirp_sdk_image_unreg>`.
-
 Download layers for the real-time Linux build by using the manifest release tag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

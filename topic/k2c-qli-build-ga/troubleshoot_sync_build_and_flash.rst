@@ -461,24 +461,6 @@ Build
          export LC_ALL=en_US.UTF-8
          export LANG=en_US.UTF-8
 
--  "failed: database disk image is malformed. abort()ing pseudo client by server request"
-
-   The Pseudo tool gets path mismatch and corrupt database issues when processing the file system operations. When Pseudo simulates the file system operations in a Yocto project, problems can occur while handling file paths and permissions.
-
-   This is a known issue in the `Yocto community <https://wiki.yoctoproject.org/wiki/Pseudo_Abort>`__.
-
-   **Solution**
-
-   Run the following commands:
-
-   .. container:: nohighlight
-      
-      ::
-
-         rm -rf <workspace_path>/build-qcom-robotics-ros2-humble/tmp-glibc
-         bitbake -c cleanall pseudo-native & bitbake pseudo-native
-         ../qirp-build qcom-robotics-full-image
-
 -  "pyinotify.WatchManagerError: No space left on device (ENOSPC)"
 
    Compilation triggers this error.

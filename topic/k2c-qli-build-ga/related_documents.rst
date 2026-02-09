@@ -30,9 +30,6 @@ Related documents
    * - `Qualcomm Dragonwing™ RB3 Gen 2 Development Kit user guide – Linux <https://docs.qualcomm.com/doc/80-70023-251/topic/landing-page.html>`__
      - 80-70023-251
 
-   * - `Qualcomm® Intelligent Robotics (QIR) SDK documentation <https://docs.qualcomm.com/doc/80-70023-265/topic/qir-sdk-landing-page.html>`__
-     - 80-70023-265
-
    * - `Qualcomm Linux Virtual Machine Setup Guide <https://docs.qualcomm.com/bundle/publicresource/topics/80-70023-41/>`__
      - 80-70023-41
 

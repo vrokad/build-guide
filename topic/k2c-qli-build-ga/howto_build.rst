@@ -75,146 +75,19 @@ Check if the build is complete
 .. _how_to_build_generate_sdk:
 
 Generate an eSDK
-^^^^^^^^^^^^^^^^^^^^^^^^^
-
-**Get a Docker shell and shell prompt**
-
-1. List the Docker images:
-
-   .. container:: nohighlight
-      
-      ::
-
-         docker images
-
-   The output for this command is as follows:
-
-   .. container:: screenoutput
-
-      .. line-block::
-
-         REPOSITORY                                                           TAG                         IMAGE ID       CREATED        SIZE
-         032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/ql-tool     20.04.20231220102843864.9   864b345bd707   2 months ago   715MB
-         032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/le.um-k2c   20.04.20231215014450998.7   4678dda58a91   2 months ago   929MB
-
-#. Attach the container:
-
-   .. container:: nohighlight
-      
-      ::
-
-         WORKSPACE=<WORKSPACE_PATH> && SRC_DIR=<SoftwareImage> && docker run --rm  -it -v ~/.qualcomm_launcher_workspace_config:/var/tmp/.docker_qualcomm_launcher_setup/ -v $WORKSPACE:$WORKSPACE -e LOCAL_USER_NAME=`id -u -n` -e LOCAL_USER_ID=`id -u` -e USER=`id -u` -e WORKSPACE=$WORKSPACE -w $WORKSPACE/$SRC_DIR <REPOSITORY:TAG> bash
-
-         # Example
-         WORKSPACE=/local/mnt/workspace/Qworkspace/DEV && SRC_DIR=LE.QCLINUX.1.0.r1 && docker run --rm  -it -v ~/.qualcomm_launcher_workspace_config:/var/tmp/.docker_qualcomm_launcher_setup/ -v $WORKSPACE:$WORKSPACE -e LOCAL_USER_NAME=`id -u -n` -e LOCAL_USER_ID=`id -u` -e USER=`id -u` -e WORKSPACE=$WORKSPACE -w $WORKSPACE/$SRC_DIR 032693710300.dkr.ecr.us-west-2.amazonaws.com/stormchaser/le.um-k2c:20.04.20231215014450998.7 bash
-
-#. Check if you are in a workspace that has ``.repo`` in it.
+^^^^^^^^^^^^^^^^
 
 **Set up the environment and generate eSDK**
 
-1. After building the ``meta-qcom-hwe`` with QSC CLI:
+#. After building from source, run these commands from the same workspace:
 
    .. container:: nohighlight
       
       ::
 
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake -c do_populate_sdk_ext <image>
-         # Example, bitbake -c do_populate_sdk_ext qcom-multimedia-image
+         kas shell -c "bitbake -c do_populate_sdk_ext <image>" meta-qcom/ci/<machine>:meta-qcom/ci/<distro>:meta-qcom/ci/lock.yml
 
-   To know the ``MACHINE`` parameter values, see `Release Notes <https://docs.qualcomm.com/doc/80-70023-300/>`__.    
-
-#. After building with ``meta-qcom-extras`` and firmware sources with
-   QSC CLI:
-
-   .. note:: This step isn't applicable for public developers (unregistered).
-
-   .. container:: nohighlight
-      
-      ::
-
-         # Example
-         export EXTRALAYERS="meta-qcom-extras"
-         export CUST_ID="213195"
-         export FWZIP_PATH="/local/mnt/workspace/extras/DEV/QCM6490.LE.1.0/common/build/ufs/bin"
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         # Example, MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake -c do_populate_sdk_ext qcom-multimedia-image
-
-#. After building standalone instructions within the same shell (shell
-   where the build is successful):
-
-   .. container:: nohighlight
-      
-      ::
-
-         bitbake -c do_populate_sdk_ext <image>
-
-         # Example
-         bitbake -c do_populate_sdk_ext qcom-multimedia-image
-
-#. After building with standalone instructions and with a new shell
-   (assuming the build workspace exists):
-
-   .. container:: nohighlight
-      
-      ::
-
-         cd <workspace_path>
-         MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake -c do_populate_sdk_ext <image>
-
-         # Example
-         cd /local/mnt/workspace/LE.QCLINUX.1.0.r1
-         MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-         bitbake -c do_populate_sdk_ext qcom-multimedia-image
-
-#. After building with standalone instructions using Dockerfile.
-
-   a. Move the control to the workspace directory:
-
-      .. container:: nohighlight
-      
-         ::
-
-            cd /local/mnt/workspace/qcom-download-utils/<release>
-
-            # Example
-            cd /local/mnt/workspace/qcom-download-utils/qcom-6.6.116-QLI.1.7-Ver.1.1
-
-   #. Set up the environment and issue an eSDK build:
-
-      .. container:: nohighlight
-      
-         ::
-
-            MACHINE=<machine> DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-            bitbake -c do_populate_sdk_ext <image>
-
-            # Example
-            MACHINE=qcs6490-rb3gen2-vision-kit DISTRO=qcom-wayland QCOM_SELECTED_BSP=custom source setup-environment
-            bitbake -c do_populate_sdk_ext qcom-multimedia-image
-
-When the eSDK generation is complete, you can see the images in the following directory: ``<workspace_path>/build-qcom-wayland/tmp-glibc/deploy/sdk``.
-
-**Troubleshoot eSDK generation – basehash mismatch**
-
-**Error excerpt**
-
-.. container:: screenoutput
-
-   .. line-block::
-
-      ERROR: When reparsing /local/mnt/workspace/extras/DEV/LE.QCLINUX.1.0.r1/build-qcom-wayland/conf/../../layers/meta-qcom-distro/recipes-products/images/qcom-multimedia-image.bb:do_populate_sdk_ext, the basehash value changed from 7bce27b0510cb666f1bba1d03f055cfef48f9db2eabc17d490e14bbe4c632eba to 48ccd9d7370e0bf2435aa8b5067162932e07a3832adfa6ca037aa0ddb765c8de. The metadata isn't deterministic and this needs to be fixed.
-      ERROR: The following commands may help:
-      ERROR: $ bitbake qcom-multimedia-image -cdo_populate_sdk_ext -Snone
-      ERROR: Then:
-      ERROR: $ bitbake qcom-multimedia-image -cdo_populate_sdk_ext -Sprintdiff
-
-**Solution**
-
-Rebuild the image and generate the eSDK again.
+When the eSDK generation is complete, you can see the images in the following directory: ``<workspace-dir>/build/tmp/deploy/sdk``.
 
 Build a standalone QDL
 ^^^^^^^^^^^^^^^^^^^^^^^^^^

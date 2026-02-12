@@ -11,7 +11,7 @@ Flash software images
     #untar tar.gz ,
     cd <Base_Workspace_Path>/build/tmp/deploy/images/<MACHINE>/
     tar -xvf <IMAGE>-<MACHINE>.rootfs.qcomflash.tar.gz
-    upon untari, <Base_Workspace_Path>/build/tmp/deploy/images/<MACHINE>/<IMAGE>-<MACHINE> use to flash.
+    <Base_Workspace_Path>/build/tmp/deploy/images/<MACHINE>/<IMAGE>-<MACHINE> can be used to flash.
 .. note:: if prebuilt flashable images tar.gz downaloded from CLO artifactory, use  option 2.
 
 Follow these steps to flash the software images:
